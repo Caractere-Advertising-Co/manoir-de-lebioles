@@ -1,0 +1,36 @@
+{
+  "name": "manoir-de-lebioles-webpack-tailwind",
+  "version": "1.0.0",
+  "description": "Template site web 2025",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "WordPress",
+    "Tailwind",
+    "Webpack"
+  ],
+  "author": "Caractere (Benoit Londero)",
+  "license": "ISC",
+  "dependencies": {
+    "fslightbox": "^3.4.1",
+    "gsap": "^3.12.5",
+    "in-view": "^0.6.1",
+    "isotope": "^1.0.0-alpha.3",
+    "isotope-layout": "^3.0.6",
+    "lodash": "^4.17.21",
+    "swiper": "^11.2.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "css-loader": "^7.1.2",
+    "postcss": "^8.5.5",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.89.1",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  }
+}

@@ -1,0 +1,62 @@
+@use "../abstracts/_setup.scss" as *;
+
+#formulaire-contact {
+  form {
+    margin: 50px 0;
+
+    input,
+    textarea {
+      width: calc(100% - 20px);
+      border: none;
+      border-bottom: 1px solid $primary-color;
+      margin-bottom: 20px;
+      outline: none;
+      padding: 5px 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input[type="submit"] {
+      width: fit-content;
+      padding: 10px 30px;
+      background-color: $secondary-color;
+      border: none;
+      border-bottom: none;
+      color: $light;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  h2 {
+    color: $secondary-color;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    display: block;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: $primary-color;
+    font-weight: 600;
+    line-height: 1.2rem;
+    a {
+      text-decoration: none;
+      color: $primary-color;
+    }
+
+    strong {
+      font-weight: 900;
+
+      a {
+        color: $secondary-color;
+        margin-top: 30px;
+        font-weight: 700;
+        display: block;
+      }
+    }
+  }
+}

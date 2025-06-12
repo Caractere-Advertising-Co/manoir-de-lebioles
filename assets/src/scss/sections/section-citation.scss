@@ -1,0 +1,20 @@
+@use "../abstracts/setup" as *;
+
+#citation {
+  padding: 100px 0;
+  z-index: 2;
+  position: relative;
+
+  h2 {
+    color: $primary-color;
+    text-align: center;
+    letter-spacing: 0;
+    font-family: "ivypresto-display", serif;
+
+    strong {
+      color: $primary-color;
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../abstracts/_setup.scss" as *;
+
+footer {
+  background-color: $dark;
+  padding: 100px 0 30px;
+  position: relative;
+  bottom: 0;
+
+  .container {
+    .footer-top {
+      padding: 50px 0;
+
+      h2 {
+        text-align: center;
+        font-size: 4rem;
+        line-height: 4rem;
+        color: $light;
+        letter-spacing: 0;
+
+        strong {
+          font-style: italic;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .footer-middle {
+      padding: 50px 0;
+      border-top: 1px solid $dark-gray;
+      border-bottom: 1px solid $dark-gray;
+
+      p {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        text-align: justify;
+        text-align-last: center;
+        color: $dark-gray;
+        font-family: "Wix Madefor Display", sans-serif;
+      }
+    }
+
+    .footer_bottom {
+      display: flex;
+      padding-top: 15px;
+
+      p {
+        width: 50%;
+        font-size: 0.8rem;
+
+        color: $light-gray;
+        font-weight: 400;
+        font-family: "Wix Madefor Display", sans-serif;
+
+        &:last-child {
+          text-align: right;
+        }
+
+        strong {
+          color: $light-gray;
+          text-transform: uppercase;
+        }
+
+        a {
+          color: $light-gray;
+          text-decoration: none;
+          font-family: "Wix Madefor Display", sans-serif;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
