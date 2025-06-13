@@ -1,0 +1,41 @@
+@use "../abstracts/_setup.scss" as *;
+
+#fullwidth-banner {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+  }
+
+  h2 {
+    letter-spacing: 1px;
+    text-align: center;
+
+    em {
+      font-weight: 400;
+    }
+  }
+
+  .cta-line {
+    text-align: center;
+    padding: 0 200px;
+    color: $light;
+    border-color: $light;
+    margin-top: 60px;
+  }
+}

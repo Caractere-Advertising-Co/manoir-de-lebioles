@@ -75,3 +75,25 @@
     }
   }
 }
+
+.cta-line {
+  text-transform: uppercase;
+  color: $light-gray;
+  border-bottom: 1px solid $light-gray;
+  padding-right: 30px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: 200;
+  font-size: 0.9rem;
+  transform: translateY(0);
+  display: block;
+  width: fit-content;
+
+  padding-bottom: 0px;
+  transition: transform ease-in-out 300ms;
+
+  &:hover {
+    transform: translateY(-10px);
+    border-bottom: none;
+  }
+}

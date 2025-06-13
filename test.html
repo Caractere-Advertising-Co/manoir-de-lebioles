@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Scroll GSAP</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 300vh; /* pour forcer le scroll */
+      }
+
+      #chef {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50vh;
+      }
+
+      #chef-content {
+        width: 30vw;
+        height: 60vh;
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9TBKsySdqEmF9XPSi-_V649gOa_Hx5tPqg&s")
+          center/cover no-repeat;
+        transition: width 1s ease, height 1s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #chef-content.expanded {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .text {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      #chef-content.expanded .text {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <section id="chef">
+      <div class="container" id="chef-content">
+        <div class="text">
+          <h2>Rencontre<br />avec notre chef</h2>
+          <p>
+            Révèle avec finesse les saveurs de saison,<br />dans une
+            interprétation aussi subtile qu'inspirée
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const tl = gsap.timeline({
+        ease: "none",
+      });
+
+      tl.from("#image img", {
+        scale: 0.6,
+        duration: 1,
+        transformOrigin: "bottom center",
+      }).to(
+        {},
+        {
+          duration: 1,
+        }
+      );
+      ScrollTrigger.create({
+        trigger: "#image",
+        start: "top top",
+        end: "+=200%",
+        pin: true,
+        animation: tl,
+        scrub: 0.78,
+        pinSpacing: false,
+      });
+    </script>
+  </body>
+</html>

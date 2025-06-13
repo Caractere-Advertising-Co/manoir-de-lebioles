@@ -5,6 +5,7 @@ footer {
   padding: 100px 0 30px;
   position: relative;
   bottom: 0;
+  z-index: 3;
 
   .container {
     .footer-top {
@@ -35,7 +36,7 @@ footer {
         text-align: justify;
         text-align-last: center;
         color: $dark-gray;
-        font-family: "Wix Madefor Display", sans-serif;
+        font-family: $Wix;
       }
     }
 
@@ -49,7 +50,7 @@ footer {
 
         color: $light-gray;
         font-weight: 400;
-        font-family: "Wix Madefor Display", sans-serif;
+        font-family: $Wix;
 
         &:last-child {
           text-align: right;
@@ -63,7 +64,7 @@ footer {
         a {
           color: $light-gray;
           text-decoration: none;
-          font-family: "Wix Madefor Display", sans-serif;
+          font-family: $Wix;
           text-transform: uppercase;
         }
       }

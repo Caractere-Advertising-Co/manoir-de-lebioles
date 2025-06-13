@@ -17,6 +17,24 @@ $skyView        = get_field('skyview-parallax','options');
 $titrePresta    = get_field('titre-presta','options');
 $txtPresta      = get_field('txt-presta','options');
 
+/* Ardennes */
+
+$txtArdennes    = get_field('texte-ardennes');
+$imgArdennes    = get_field('image-ardennes');
+$ctaArdennes    = get_field('cta-ardennes');
+
+/* Chef */
+
+$bgChef         = get_field('bg-chef');
+$txtChef        = get_field('txt-chef');
+$ctaChef        = get_field('cta-chef');
+
+/* Piscine */
+
+$bgPiscine      = get_field('bg-piscine');
+$txtPiscine     = get_field('txt-piscine');
+$ctaPiscine     = get_field('cta-piscine');
+
 get_header();?>
 
 <div id="hero_container"  style="background:url('<?php if($hero): echo $hero['url'];endif;?>');background-size:cover;">
@@ -171,6 +189,77 @@ get_header();?>
         <?php endwhile;
       endif;?>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="sejours">
+      <div class="container columns">
+        <?php if(have_rows('sejours')):
+        $i = 0;
+        while(have_rows('sejours')): the_row('sejours');
+        
+          $bg = get_sub_field('background');
+          $titre = get_sub_field('titre_sejour');
+          $lien = get_sub_field('lien');?>
+        
+        <div class="col from-bottom <?php echo $i != 0 ? '-slow' : '';?>">
+          <div class="block-img">
+            <img src="<?php echo $bg['url'];?>" alt="<?php echo $bg['title'];?>"/>
+          </div>
+          <h4><?php echo $titre;?></h4>
+          <a href="<?php echo $lien['url'];?>" class="cta-line"><?php echo $lien['title'];?></a>
+        </div>
+        <?php $i++; endwhile;
+      endif;?>
+      </div>
+</section>
+
+<?php get_template_part( 'templates-parts/fullwidth-banner' );?>
+
+<section id="ardennes">
+  <div class="container columns">
+      <div class="colg">
+        <?php if($txtArdennes): echo $txtArdennes; endif;?>
+        <?php if($ctaArdennes):?>
+          <a href="<?php echo $ctaArdennes;?>" class="cta">
+            <?php echo $ctaArdennes['title'];?>
+          </a>
+        <?php endif;?>
+      </div>
+      <div class="cold">
+        <?php if($imgArdennes):?>
+          <div class="block-img">
+            <img src="<?php echo $imgArdennes['url'];?>" alt="<?php echo $imgArdennes['title'];?>"/>
+          </div>
+        <?php endif;?>
+        </div>
+    </div>
+</section>
+
+
+<section id="chef">
+  <?php if($bgChef):?>
+    <div id="backgroundChef">
+      <img src="<?php echo $bgChef['url'];?>" alt="<?php echo $bgChef['title'];?>">
+    </div>
+  <?php endif;?>
+  <div id="text">
+    <div class="text">
+      <?php if($txtChef): echo $txtChef; endif;?>
+    </div>
+  </div>
+</section>
+
+<section id="piscine">
+  <?php if($bgPiscine):?>
+    <div id="backgroundPiscine">
+      <img src="<?php echo $bgPiscine['url'];?>" alt="<?php echo $bgPiscine['title'];?>">
+    </div>
+  <?php endif;?>
+  <div id="textPiscine">
+    <div class="text">
+      <?php if($txtPiscine): echo $txtPiscine; endif;?>
     </div>
   </div>
 </section>
