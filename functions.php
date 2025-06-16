@@ -1,9 +1,19 @@
 <?php 
-function mon_theme_elementor_support() {
+
+// functions.php
+function bdp_enable_elementor_support() {
   add_post_type_support('page', 'elementor');
 }
-add_action('after_setup_theme', 'mon_theme_elementor_support');
+add_action('after_setup_theme', 'bdp_enable_elementor_support');
 
+// Forcer Elementor à utiliser un template vide propre (sans header/footer)
+function bdp_elementor_blank_canvas($template) {
+  if (is_page_template('page-builder.php')) {
+    return locate_template('page-builder.php');
+  }
+  return $template;
+}
+add_filter('template_include', 'bdp_elementor_blank_canvas');
 
 remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
 
@@ -127,4 +137,42 @@ function get_chambre_gallery($data) {
       'title' => $img['title']
     ];
   }, $gallery);
+}
+
+
+/* Formulaire BREVO x API */
+
+add_action('wp_ajax_nopriv_bdp_brevo_add_contact', 'bdp_brevo_add_contact');
+add_action('wp_ajax_bdp_brevo_add_contact', 'bdp_brevo_add_contact');
+
+function bdp_brevo_add_contact() {
+    $data = json_decode(file_get_contents('php://input'), true);
+    if (empty($data['email']) || !is_email($data['email'])) {
+        wp_send_json_error('Email invalide', 400);
+    }
+    $email = sanitize_email($data['email']);
+
+    $payload = [
+        'email' => 'benoit@caractere-advertising.be',
+        'listIds' => [10], // ID de ta liste
+        'updateEnabled' => true,
+    ];
+    $response = wp_remote_post('https://api.brevo.com/v3/contacts', [
+        'headers' => [
+            'Content-Type' => 'application/json',
+            'accept' => 'application/json',
+            'api-key' => BREVO_API_KEY,
+        ],
+        'body' => json_encode($payload),
+    ]);
+
+    if (is_wp_error($response)) {
+        wp_send_json_error($response->get_error_message(), 500);
+    }
+    $code = wp_remote_retrieve_response_code($response);
+    if ($code >= 200 && $code < 300) {
+        wp_send_json_success();
+    } else {
+        wp_send_json_error(wp_remote_retrieve_body($response), $code);
+    }
 }

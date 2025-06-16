@@ -1,0 +1,42 @@
+@use "../abstracts/setup" as *;
+
+#section-logo {
+  padding: 100px 0;
+
+  .container {
+    justify-content: space-between;
+    align-items: center;
+
+    .colg,
+    .cold {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .block-img {
+        height: 80px;
+
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    .colg {
+      border-right: 1px solid $light-gray;
+      padding-right: 100px;
+    }
+
+    .cold {
+      gap: 30px;
+
+      .block-img {
+        height: 40px;
+
+        &:nth-child(2) {
+          height: 80px;
+        }
+      }
+    }
+  }
+}
