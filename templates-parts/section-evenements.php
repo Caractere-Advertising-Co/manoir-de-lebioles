@@ -7,7 +7,7 @@ $ctaEvents = get_field('cta-evenement','options');
 ?>
 
 <section id="evenements">
-    <div class="container columns content">
+    <div class="container columns">
         <div class="colg">
             <div class="swiper swiper-events from-bottom">
                 <div class="swiper-wrapper">

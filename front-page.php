@@ -237,7 +237,7 @@ get_header();?>
 <?php get_template_part( 'templates-parts/fullwidth-banner' );?>
 
 <section id="ardennes">
-  <div class="container columns content">
+  <div class="container columns">
       <div class="colg">
         <?php if($txtArdennes): echo $txtArdennes; endif;?>
         <?php if($ctaArdennes):?>
