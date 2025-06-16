@@ -415,12 +415,12 @@
 
   #text,
   #textPiscine {
-    height: 45vh;
+    height: 50vh;
     width: 80vw;
     max-width: 1200px;
     margin: auto;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     top: 0;
     z-index: 2;
@@ -441,6 +441,7 @@
     h3 {
       font-weight: 200;
       font-size: 3rem;
+      line-height: 3rem;
       font-style: italic;
     }
   }
