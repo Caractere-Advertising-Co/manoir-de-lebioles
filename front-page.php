@@ -213,7 +213,7 @@ get_header();?>
 <?php get_template_part( 'templates-parts/section-citation' );?>
 
 <section id="sejours">
-      <div class="container columns content">
+      <div class="container columns">
         <?php if(have_rows('sejours')):
         $i = 0;
         while(have_rows('sejours')): the_row('sejours');
