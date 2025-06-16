@@ -11,7 +11,11 @@
 
   &.columns {
     display: flex;
-    gap: 80px;
+    gap: 100px;
+  }
+
+  &.content {
+    max-width: 1200px;
   }
 }
 

@@ -1,0 +1,76 @@
+@use "../abstracts/_setup.scss" as *;
+
+#section-actualites {
+  padding: 100px 0;
+
+  .intro {
+    gap: 0;
+
+    h2 {
+      color: $primary-color;
+      font-family: $Wix;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .colg,
+    .cold {
+      width: 50%;
+    }
+
+    margin-bottom: 100px;
+  }
+
+  .grid-actus {
+    justify-content: space-between;
+
+    .card-actus {
+      flex: 1; // ← égalise les largeurs
+      min-width: 0; // ← pour éviter les débordements
+      display: flex;
+      flex-direction: column;
+
+      .imgCard {
+        background-color: $light-gray;
+        position: relative;
+        height: 250px;
+        width: 100%;
+
+        .date {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 20px;
+          background-color: $light;
+          text-transform: uppercase;
+          font-family: $Wix;
+          display: block;
+          padding: 10px 20px;
+          z-index: 2;
+          color: $light-gray;
+          letter-spacing: 1px;
+        }
+      }
+
+      .titleCard {
+        font-family: $Wix;
+        font-size: 1.2rem;
+      }
+
+      .ctaCard {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $Wix;
+        color: $light-gray;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .contCta {
+    padding: 100px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

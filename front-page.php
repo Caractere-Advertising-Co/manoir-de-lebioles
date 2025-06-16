@@ -47,15 +47,36 @@ get_header();?>
 <?php get_template_part( 'templates-parts/separator/line' );?>
 
 <section id="introduction">
-    <div class="container columns">
+    <div class="container columns content">
+      <?php if(have_rows('colonne_gauche')):
+        while(have_rows('colonne_gauche')): the_row();?>
+          <div class="colg">
+            <?php
+            $txtIntro = get_sub_field('txt_intro');
+            if($txtIntro): echo $txtIntro; endif;?>
+          </div>
+        <?php endwhile;
+      endif;?>
+      <?php if(have_rows('colonne_droite')):
+            while(have_rows('colonne_droite')): the_row();?>
+            <div class="cold">
+                <?php
+
+                $surtitreIntro = get_sub_field('surtrite_intro');
+                $titreIntro = get_sub_field('titre_intro');
+
+                if($surtitreIntro): echo '<h2 class="from-right">'.$surtitreIntro.'</h2>'; endif;
+                if($titreIntro): echo $titreIntro; endif;
+            ?></div><?php 
+            endwhile;
+        endif;?>
+    </div>
+    <div class="container columns content">
         <?php if(have_rows('colonne_gauche')):
             while(have_rows('colonne_gauche')): the_row();?>
             <div class="colg">
                 <?php
-                $txtIntro = get_sub_field('txt_intro');
                 $imgIntro = get_sub_field('image_intro');
-
-                if($txtIntro): echo $txtIntro; endif;
                 if($imgIntro):?>
                     <div class="block-img from-bottom">
                         <img src="<?php echo $imgIntro['url'];?>" alt="<?php echo $imgIntro['name'];?>"/>
@@ -68,15 +89,11 @@ get_header();?>
             while(have_rows('colonne_droite')): the_row();?>
             <div class="cold">
                 <?php
-                $surtitreIntro = get_sub_field('surtrite_intro');
-                $titreIntro = get_sub_field('titre_intro');
                 $txtIntro      = get_sub_field('txt_dte_intro');
                 $galerie       = get_sub_field('galerie_intro');
                 $cta           = get_sub_field('cta_intro');
                 $cta_2         = get_sub_field('cta_2_intro');
 
-                if($surtitreIntro): echo '<h2 class="from-right">'.$surtitreIntro.'</h2>'; endif;
-                if($titreIntro): echo $titreIntro; endif;
                 if($galerie):
                     echo '<div class="block-galerie">';
                     $i = 0;
@@ -101,7 +118,7 @@ get_header();?>
 </section>
 
 <section id="chambres-suites">
-  <div class="container columns">
+  <div class="container columns content">
     <div class="colg">
         <?php if($titreChambre): echo $titreChambre; endif;?>
     </div>
@@ -110,7 +127,7 @@ get_header();?>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container content">
     <div class="swiper swiper-chambre">
       <div class="swiper-wrapper">
         <?php
@@ -164,7 +181,7 @@ get_header();?>
 </section>
 
 <section id="prestation-infra">
-  <div class="container columns">
+  <div class="container columns content">
     <div class="colg">
         <?php if($titrePresta): echo $titrePresta; endif;?>
     </div>
@@ -192,6 +209,8 @@ get_header();?>
     </div>
   </div>
 </section>
+
+<?php get_template_part( 'templates-parts/section-citation' );?>
 
 <section id="sejours">
       <div class="container columns">
@@ -222,14 +241,14 @@ get_header();?>
       <div class="colg">
         <?php if($txtArdennes): echo $txtArdennes; endif;?>
         <?php if($ctaArdennes):?>
-          <a href="<?php echo $ctaArdennes;?>" class="cta">
+          <a href="<?php echo $ctaArdennes;?>" class="cta from-left">
             <?php echo $ctaArdennes['title'];?>
           </a>
         <?php endif;?>
       </div>
       <div class="cold">
         <?php if($imgArdennes):?>
-          <div class="block-img">
+          <div class="block-img from-bottom">
             <img src="<?php echo $imgArdennes['url'];?>" alt="<?php echo $imgArdennes['title'];?>"/>
           </div>
         <?php endif;?>
@@ -237,6 +256,41 @@ get_header();?>
     </div>
 </section>
 
+<section id="galerie-ardennes">
+  <?php 
+    $galerie = get_field('galerie-ardennes');
+    $i = 0;
+
+    if($galerie):
+      foreach($galerie as $g):
+        switch($i):
+          case 0:
+            echo '<div class="bigImg block-img from-bottom"><img src="'.$g['url'].'" alt="'.$g['title'].'"></div>';
+            break;
+          case 1:
+            echo '<div class="smallImg1 block-img from-bottom -slow"><img src="'.$g['url'].'" alt="'.$g['title'].'"></div>';
+            break;
+          case 2:
+            echo '<div class="smallImg2 block-img from-bottom -veryslow"><img src="'.$g['url'].'" alt="'.$g['title'].'"/></div>';
+            break;
+          case 3:
+            echo '<div class="smallImg3 block-img from-bottom -slow"><img src="'.$g['url'].'" alt="'.$g['title'].'"/></div>';
+            break;
+          case 4:
+            echo '<div class="smallImg4 block-img from-bottom -veryslow"><img src="'.$g['url'].'" alt="'.$g['title'].'"/></div>';
+            break;
+          default:
+            echo '<div class="smallImg1 block-img from-bottom -slow"><img src="'.$g['url'].'" alt="'.$g['title'].'"/></div>';
+            break;
+        endswitch;
+
+        $i++;
+      endforeach;
+    endif;
+  ?>
+</section>
+
+<?php get_template_part( 'templates-parts/section-evenements' );?>
 
 <section id="chef">
   <?php if($bgChef):?>
@@ -264,5 +318,6 @@ get_header();?>
   </div>
 </section>
 
-<?php get_template_part( 'templates-parts/section-citation' );?>
+<?php get_template_part( 'templates-parts/section-actualites' );?>
+<?php get_template_part( 'templates-parts/section-logo' );?>
 <?php get_footer();?>

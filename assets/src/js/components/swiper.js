@@ -1,14 +1,20 @@
 // index.js
 
 import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
 import "swiper/css"; // utile si tu utilises les styles par défaut
+import "swiper/css/navigation"; // styles pour les flèches, optionnel
 
 import "fslightbox";
+
 window.addEventListener("load", () => {
   // Swiper init
   const swiper = new Swiper(".swiper-chambre", {
+    modules: [Navigation],
+
     slidesPerView: 3,
-    spaceBetween: 10,
+    spaceBetween: 30,
     loop: true,
     navigation: {
       nextEl: ".chambre-button-next",
@@ -16,9 +22,21 @@ window.addEventListener("load", () => {
     },
   });
 
+  const swiperEvents = new Swiper(".swiper-events", {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: ".btnNextEvents",
+      prevEl: ".btnPrevEvents",
+    },
+  });
+
   const swiperPresta = new Swiper(".swiper-prestation", {
     slidesPerView: "auto",
     spaceBetween: 10,
+    modules: [Navigation],
   });
 
   // Click listener une fois que tout est chargé

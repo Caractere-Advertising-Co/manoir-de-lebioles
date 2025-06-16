@@ -35,10 +35,6 @@ $(document).ready(function () {
     makeMagic(el, "fade-in-right");
   });
 
-  inView(".from-right-slow").on("enter", (el) => {
-    makeMagic(el, "fade-in-right-slow");
-  });
-
   inView(".from-bottom").on("enter", (el) => {
     makeMagic(el, "fade-in-bottom");
   });

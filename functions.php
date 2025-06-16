@@ -1,4 +1,9 @@
 <?php 
+function mon_theme_elementor_support() {
+  add_post_type_support('page', 'elementor');
+}
+add_action('after_setup_theme', 'mon_theme_elementor_support');
+
 
 remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
 
