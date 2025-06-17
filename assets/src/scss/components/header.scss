@@ -1,3 +1,48 @@
-header {
-  background-color: red;
+@use "../abstracts/_setup.scss" as *;
+
+#banner-top {
+  background-color: $primary-color;
+  color: $light;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+
+  .container {
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 90vw !important;
+
+    .contact {
+      display: flex;
+      gap: 20px;
+
+      a,
+      p {
+        text-decoration: none;
+        color: $middle-gray;
+        font-size: 0.7rem;
+      }
+    }
+
+    .rs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      a {
+        height: 20px;
+        display: block;
+
+        img {
+          filter: invert(1) brightness(0.4);
+        }
+      }
+    }
+  }
 }

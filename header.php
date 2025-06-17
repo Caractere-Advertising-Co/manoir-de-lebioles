@@ -28,17 +28,14 @@
             <path fill="#ffffff"
                 d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
         </svg>
-    </div>
+    </div>  
 
     <?php if(is_front_page()):
         get_template_part( 'templates-parts/section-popup' );
     endif;?>
 
     <header>
-        <?php $banner = get_field('bandeau_top_header','options');
-        if($banner): ?>
-            <div class="top_banner_header"><p><?php echo $banner;?></p></div>
-        <?php endif;?>
+        <?php get_template_part( 'templates-parts/banner' );?>
 
         <?php get_template_part( 'templates-parts/header-nav' );?>
     </header>
