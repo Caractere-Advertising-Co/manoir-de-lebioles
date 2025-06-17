@@ -40,7 +40,7 @@ $ctaPiscine     = get_field('cta-piscine');
 get_header();?>
 
 <div id="hero_container"  style="background:url('<?php if($hero): echo $hero['url'];endif;?>');background-size:cover;">
-    <div class="container">
+    <div class="container from-left">
         <?php if($titreHero): echo $titreHero; endif;?>
         <?php if($subTitleHero): echo $subTitleHero; endif;?>
     </div>

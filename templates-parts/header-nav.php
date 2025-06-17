@@ -6,15 +6,15 @@ $logo       = get_field('logo-entreprise','options');
 
 <section id="main-header">
     <div class="container columns content">
-   <a href="#!" class="btnMegamenu" id="btnMegamenu">
-  <svg id="open_the_Mmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#ffffff" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
-    <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
-      <animate id="animate_open" dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" />
-      <animate id="animate_close" dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" />
-    </path>
-  </svg>
-  Menu
-</a>
+      <a href="#!" class="btnMegamenu" id="btnMegamenu">
+        <svg id="open_the_Mmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#ffffff" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+          <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+            <animate id="animate_open" dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" />
+            <animate id="animate_close" dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" />
+          </path>
+        </svg>
+        Menu
+      </a>
 
         <?php if($logo):?>
             <div class="block-img">
@@ -22,7 +22,7 @@ $logo       = get_field('logo-entreprise','options');
             </div>
         <?php endif;?>
 
-        <div class="colg">
+        <div class="cold">
             <a href="#">Contact</a>
             <select>
                 <option>FR</option>
