@@ -84,6 +84,15 @@
         line-height: 2.5rem;
         letter-spacing: 1px;
         margin: 30px 0;
+
+        strong {
+          font-style: normal;
+          font-weight: 400;
+        }
+
+        em {
+          font-style: italic;
+        }
       }
 
       .block-galerie {
@@ -114,9 +123,11 @@
 
     h2 {
       color: $primary-color;
-      font-family: $Wix;
-      text-transform: uppercase;
       letter-spacing: 2px;
+
+      em {
+        font-style: italic;
+      }
     }
 
     .colg,
@@ -201,8 +212,6 @@
 
     h2 {
       color: $primary-color;
-      font-family: $Wix;
-      text-transform: uppercase;
       letter-spacing: 2px;
     }
 
@@ -338,8 +347,8 @@
 
       .block-img {
         height: 100%;
-        max-width: 500px;
-        width: 60%;
+        //max-width: 500px;
+        width: 100%;
       }
     }
   }
