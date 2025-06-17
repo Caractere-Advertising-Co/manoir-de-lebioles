@@ -17,8 +17,6 @@
   </div>
 </section>
 
-
-
 <script>
 document.getElementById('bdp-brevo-form').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -40,7 +38,7 @@ document.getElementById('bdp-brevo-form').addEventListener('submit', function(e)
   .then(r => r.json())
   .then(data => {
     if (data.success) {
-      alert('Vous êtes inscrit');
+      console.warn('Inscription réussie');
     } else {
       msg.style.display = 'block';
       msg.textContent = 'Erreur : ' + (data.data || 'Impossible d’ajouter l’adresse.');
