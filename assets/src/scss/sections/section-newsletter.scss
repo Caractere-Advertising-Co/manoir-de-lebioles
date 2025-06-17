@@ -29,7 +29,7 @@
         input {
           background: none;
           border: none;
-          border-bottom: 1px solid $middle-gray;
+          border-bottom: 1px solid $light-gray;
           color: $light-gray;
           min-width: 300px;
         }
@@ -39,7 +39,12 @@
           height: 30px;
           border: none;
           background-color: $middle-gray;
+          border-bottom: 1px solid $light-gray;
           padding: 5px;
+
+          &:hover {
+            background-color: $dark-gray;
+          }
         }
       }
     }

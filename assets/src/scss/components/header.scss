@@ -1,48 +1,127 @@
 @use "../abstracts/_setup.scss" as *;
 
-#banner-top {
-  background-color: $primary-color;
-  color: $light;
-  padding: 5px;
+header {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100vw;
 
-  .container {
-    justify-content: space-between;
-    align-items: center;
-    height: 30px;
-    width: 90vw !important;
+  #banner-top {
+    background-color: $primary-color;
+    color: $light;
+    padding: 5px;
+    width: 100vw;
 
-    .contact {
-      display: flex;
-      gap: 20px;
-
-      a,
-      p {
-        text-decoration: none;
-        color: $middle-gray;
-        font-size: 0.7rem;
-      }
-    }
-
-    .rs {
-      display: flex;
-      flex-direction: row;
+    .container {
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      gap: 15px;
+      height: 30px;
+      width: 90vw !important;
 
-      a {
-        height: 20px;
-        display: block;
+      .contact {
+        display: flex;
+        gap: 20px;
 
-        img {
-          filter: invert(1) brightness(0.4);
+        a,
+        p {
+          text-decoration: none;
+          color: $middle-gray;
+          font-size: 0.7rem;
+        }
+      }
+
+      .rs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        a {
+          height: 20px;
+          display: block;
+
+          img {
+            filter: invert(1) brightness(0.4);
+          }
         }
       }
     }
+  }
+
+  #main-header {
+    .content {
+      padding: 50px 0;
+      justify-content: space-between;
+      border-bottom: 1px solid $light;
+
+      #btnMegamenu {
+        position: relative;
+        z-index: 5;
+      }
+    }
+  }
+  #megamenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(100px) saturate(1.8);
+    width: 50vw;
+    z-index: 1;
+    height: 100vh;
+    transform: translateX(-50vw);
+    transition: transform ease-in 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &.active {
+      transform: translateX(0);
+      // NE PAS remettre transform/opacity ici pour les <li>
+    }
+
+    .content-megamenu {
+      ul {
+        padding-right: calc(16px + 6.5vw);
+
+        li {
+          display: block;
+          margin-bottom: 30px;
+          opacity: 0;
+          transform: translateX(-100%);
+          width: 100%;
+          text-align: right;
+          will-change: opacity, transform;
+          transition: opacity 0.8s ease, transform 0.8s ease;
+
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $light-gray;
+            cursor: none;
+
+            &:hover {
+              color: $light;
+            }
+          }
+        }
+      }
+    }
+  }
+  .circle-cursor {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid $gold-color;
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%); /* Centers the circle on the cursor */
+    pointer-events: none; /* Prevents interference with other elements */
+    z-index: 999; /* Ensure it's on top */
+    display: none; /* Initially hidden */
   }
 }

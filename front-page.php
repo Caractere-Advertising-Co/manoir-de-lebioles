@@ -4,6 +4,8 @@ $hero           = get_field('hero');
 $titreHero      = get_field('titre_hero');
 $subTitleHero   = get_field('soustitre_hero');
 
+$ctaSej         = get_field('cta_citation'); 
+
 /* Chambre */
 
 $titreChambre   = get_field('titre-chambre');

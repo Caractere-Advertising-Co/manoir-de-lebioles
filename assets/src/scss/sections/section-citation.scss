@@ -1,7 +1,7 @@
 @use "../abstracts/setup" as *;
 
 #citation {
-  padding: 100px 0;
+  padding: 50px 0;
   z-index: 2;
   position: relative;
   background-color: $light;
@@ -17,5 +17,12 @@
       font-weight: 300;
       font-style: italic;
     }
+  }
+
+  .cta-line {
+    margin: 50px auto 0;
+    width: fit-content;
+    padding: 5px 150px;
+    color: $dark-gray;
   }
 }
