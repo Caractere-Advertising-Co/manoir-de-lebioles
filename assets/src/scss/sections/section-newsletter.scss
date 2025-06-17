@@ -1,0 +1,47 @@
+@use "../abstracts/_setup.scss" as *;
+
+#section-newsletter {
+  background-color: $dark;
+  padding: 50px 0;
+
+  .container {
+    justify-content: space-between;
+
+    .colg {
+      h2 {
+        font-size: 1rem;
+        letter-spacing: 0;
+        font-family: $Wix;
+        line-height: 1.2rem;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .cold {
+      form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+          background: none;
+          border: none;
+          border-bottom: 1px solid $middle-gray;
+          color: $light-gray;
+          min-width: 300px;
+        }
+
+        .block-img {
+          width: 30px;
+          height: 30px;
+          border: none;
+          background-color: $middle-gray;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

@@ -146,33 +146,38 @@ add_action('wp_ajax_nopriv_bdp_brevo_add_contact', 'bdp_brevo_add_contact');
 add_action('wp_ajax_bdp_brevo_add_contact', 'bdp_brevo_add_contact');
 
 function bdp_brevo_add_contact() {
-    $data = json_decode(file_get_contents('php://input'), true);
-    if (empty($data['email']) || !is_email($data['email'])) {
+    if (empty($_POST['email']) || !is_email($_POST['email'])) {
         wp_send_json_error('Email invalide', 400);
     }
-    $email = sanitize_email($data['email']);
+
+    $email = sanitize_email($_POST['email']);
 
     $payload = [
-        'email' => 'benoit@caractere-advertising.be',
-        'listIds' => [10], // ID de ta liste
+        'email' => $email,
+        'listIds' => [10], // Remplace avec l'ID de ta liste Brevo
         'updateEnabled' => true,
+        'attributes' => [
+          'ORIGINE' => 'API WordPress'
+        ]
     ];
+
     $response = wp_remote_post('https://api.brevo.com/v3/contacts', [
         'headers' => [
             'Content-Type' => 'application/json',
             'accept' => 'application/json',
-            'api-key' => BREVO_API_KEY,
+            'api-key' => BREVO_API_KEY, // définit dans wp-config.php
         ],
         'body' => json_encode($payload),
     ]);
 
     if (is_wp_error($response)) {
-        wp_send_json_error($response->get_error_message(), 500);
+        wp_send_json_error('Erreur API: ' . $response->get_error_message(), 500);
     }
-    $code = wp_remote_retrieve_response_code($response);
-    if ($code >= 200 && $code < 300) {
+
+    $status = wp_remote_retrieve_response_code($response);
+    if ($status >= 200 && $status < 300) {
         wp_send_json_success();
     } else {
-        wp_send_json_error(wp_remote_retrieve_body($response), $code);
+        wp_send_json_error('Erreur Brevo: ' . wp_remote_retrieve_body($response), $status);
     }
 }
