@@ -1,8 +1,8 @@
 <?php 
 
-$hero           = get_field('hero');
-$titreHero      = get_field('titre_hero');
-$subTitleHero   = get_field('soustitre_hero');
+// $hero           = get_field('hero');
+// $titreHero      = get_field('titre_hero');
+// $subTitleHero   = get_field('soustitre_hero');
 
 $ctaSej         = get_field('cta_citation'); 
 
@@ -35,13 +35,7 @@ $ctaPiscine     = get_field('cta-piscine');
 
 get_header();?>
 
-<div id="hero_container"  style="background:url('<?php if($hero): echo $hero['url'];endif;?>');background-size:cover;">
-    <div class="container from-left">
-        <?php if($titreHero): echo $titreHero; endif;?>
-        <?php if($subTitleHero): echo $subTitleHero; endif;?>
-    </div>
-</div>
-
+<?php get_template_part( 'templates-parts/section-hero');?>
 <?php get_template_part( 'templates-parts/separator/line' );?>
 
 <section id="introduction">
