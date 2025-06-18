@@ -48,10 +48,17 @@
 }
 
 header {
-  position: sticky;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 2;
+
+  #sticky-trigger {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%;
+  }
 
   #main-header {
     min-height: 150px;
@@ -110,6 +117,8 @@ header {
     &.sticky {
       top: 0;
       background: $light;
+      position: fixed;
+      width: 100vw;
       min-height: 75px;
       box-shadow: 0 2px 20px rgb(0 0 0 / 10%);
 

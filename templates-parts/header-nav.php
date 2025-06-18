@@ -3,7 +3,7 @@
 $logo       = get_field('logo-entreprise','options');
 
 ?>
-
+<div id="sticky-trigger"></div>
 <section id="main-header">
     <div class="container columns content">
       <a href="#!" class="btnMegamenu" id="btnMegamenu">

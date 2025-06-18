@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menu = document.getElementById("main-header");
+  const header = document.getElementById("main-header");
+  const trigger = document.getElementById("sticky-trigger");
 
-  let menuPosition = menu.offsetTop;
-
-  console.log(window.scrollY);
-  console.log(menuPosition);
-
-  window.addEventListener("resize", () => {
-    menuPosition = menu.offsetTop;
-  });
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= menuPosition) {
-      menu.classList.add("sticky");
-    } else {
-      menu.classList.remove("sticky");
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    },
+    {
+      rootMargin: "0px",
+      threshold: 0,
     }
-  });
+  );
+
+  observer.observe(trigger);
 });
