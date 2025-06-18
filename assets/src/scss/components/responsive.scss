@@ -34,6 +34,10 @@
           display: none;
         }
       }
+
+      &.sticky > #megamenu.active {
+        background-color: red;
+      }
     }
 
     #megamenu {
@@ -46,6 +50,10 @@
       .content-megamenu {
         ul {
           padding-right: 0;
+
+          li {
+            text-align: center;
+          }
         }
       }
     }

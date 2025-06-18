@@ -1,8 +1,8 @@
 @use "../abstracts/_setup.scss" as *;
 
 footer {
-  background-color: $dark;
-  padding: 50px 0 30px;
+  @include Gray-to-dark;
+  padding: 30px 0;
   position: relative;
   bottom: 0;
   z-index: 3;
@@ -11,7 +11,8 @@ footer {
     width: 80vw !important;
 
     .footer-top {
-      padding: 50px 0;
+      padding: 70px 0;
+      border-top: 1px solid $middle-gray;
 
       h2 {
         text-align: center;
@@ -29,15 +30,15 @@ footer {
 
     .footer-middle {
       padding: 50px 0;
-      border-top: 1px solid $dark-gray;
-      border-bottom: 1px solid $dark-gray;
+      border-top: 1px solid $middle-gray;
+      border-bottom: 1px solid $middle-gray;
 
       p {
         font-size: 0.8rem;
         line-height: 1.2rem;
         text-align: justify;
         text-align-last: center;
-        color: $dark-gray;
+        color: $middle-gray;
         font-family: $Wix;
       }
     }

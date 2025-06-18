@@ -1,7 +1,7 @@
 @use "../abstracts/_setup.scss" as *;
 
 #section-newsletter {
-  background-color: $dark;
+  @include Gray-to-dark;
   padding: 50px 0;
 
   .container {
@@ -21,10 +21,13 @@
     }
 
     .cold {
+      width: 50%;
+
       form {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
 
         input {
           background: none;
@@ -32,6 +35,7 @@
           border-bottom: 1px solid $light-gray;
           color: $light-gray;
           min-width: 300px;
+          width: 100%;
         }
 
         .block-img {
