@@ -14,6 +14,9 @@ $ctaChambre     = get_field('cta_chambre');
 
 $skyView        = get_field('skyview-parallax','options');
 
+$fLeft          = get_field('fleche-gauche','options');
+$fRight         = get_field('fleche-droite','options');
+
 
 /* Ardennes */
 
@@ -135,7 +138,7 @@ get_header();?>
             $gallery = get_field('galerie-chambre');
 
             if ($gallery):
-              $thumb = $gallery[0]['sizes']['medium'];
+              $thumb = $gallery[0]['sizes']['large'];
               ?>
               <div class="swiper-slide" data-id="<?= get_the_ID(); ?>">
                 <img src="<?= esc_url($thumb); ?>" alt="<?= esc_attr(get_the_title()); ?>">
@@ -149,12 +152,16 @@ get_header();?>
       </div>
     </div>
 
-    <div class="swiper-button-prev chambre-button-prev">
-        <img src="http://localhost:10018/wp-content/uploads/2025/06/Capture-decran-2025-06-12-a-14.42.09.png" alt="" />
-    </div>
-    <div class="swiper-button-next chambre-button-next">
-        <img src="http://localhost:10018/wp-content/uploads/2025/06/Capture-decran-2025-06-12-a-14.41.55.png" alt="" />
-    </div>
+    <?php if($fLeft):?>
+      <div class="swiper-button-prev chambre-button-prev">
+        <img src="<?php echo $fLeft['url'];?>" alt="<?php echo $fLeft['title'];?>" />
+      </div>
+    <?php endif;?>
+    <?php if($fRight):?>
+      <div class="swiper-button-next chambre-button-next">
+          <img src="<?php echo $fRight['url'];?>" alt="<?php echo $fRight['title'];?>" />
+      </div>
+    <?php endif;?>
   </div>
 
   <div class="container">
