@@ -6,6 +6,7 @@
   }
   .columns {
     flex-direction: column;
+    gap: 30px;
 
     .colg,
     .cold,
@@ -14,19 +15,20 @@
     }
   }
 
+  #banner-top {
+    display: none;
+  }
+
   header {
     .columns {
       flex-direction: row !important;
     }
 
-    #banner-top {
-      display: none;
-    }
-
     #main-header {
       .container {
         flex-direction: column-reverse !important;
-        gap: 30px;
+        gap: 10px;
+        padding: 15px 0 30px;
 
         .cold {
           display: none;
@@ -54,12 +56,14 @@
       h1 {
         font-size: 3rem;
         line-height: 3.5rem;
+        text-align: center;
       }
 
       h2 {
         font-size: 1.2rem;
         line-height: 1.5rem;
         letter-spacing: 15px;
+        text-align: center;
       }
     }
   }
@@ -97,17 +101,6 @@
     }
   }
 
-  #chambres-suites {
-    .container {
-      .swiper-button-next {
-        right: 0;
-      }
-      .swiper-button-prev {
-        left: 0;
-      }
-    }
-  }
-
   #citation,
   #fullwidth-banner {
     .cta-line {
@@ -116,39 +109,102 @@
   }
 
   #galerie-ardennes {
-    height: 300px;
+    height: 360px;
+    grid-template-rows: repeat(1, 1fr);
+
     .bigImg {
-      height: 300px;
-      width: 50vw;
+      height: 250px;
+      width: 100vw;
+      grid-area: 1 / 1 / 5 / 5;
     }
 
     .smallImg1,
     .smallImg2,
     .smallImg3,
     .smallImg4 {
-      height: 150px;
+      height: 110px;
+      aspect-ratio: 1;
       width: 25vw;
+      opacity: 1 !important;
     }
 
-    // .bigImg {
-    //   grid-area: 1 / 1 / 2 / 3;
-    // }
-    // .smallImg1 {
-    //   grid-area: 2 / 1 / 3 / 2;
-    // }
-    // .smallImg2 {
-    //   grid-area: 2 / 2 / 3 / 3;
-    // }
-    // .smallImg3 {
-    //   grid-area: 3 / 1 / 4 / 2;
-    // }
-    // .smallImg4 {
-    //   grid-area: 3 / 2 / 4 / 3;
-    // }
+    .smallImg1 {
+      grid-area: 2 / 1 / 2 / 2;
+    }
+    .smallImg2 {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    .smallImg3 {
+      grid-area: 2 / 3 / 4 / 4;
+    }
+    .smallImg4 {
+      grid-area: 2 / 4 / 4 / 4;
+    }
+  }
+
+  #ardennes {
+    padding: 0;
+
+    &::after {
+      top: -5%;
+    }
+  }
+
+  #chambres-suites {
+    padding: 50px 0;
+
+    .columns {
+      margin-bottom: 50px;
+
+      h2 {
+        margin-bottom: 30px;
+      }
+    }
+
+    .container {
+      .swiper-chambre {
+        width: 70vw;
+        height: 400px;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            height: 400px;
+          }
+        }
+      }
+
+      .swiper-button-next {
+        right: 0;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 5px 10px;
+        backdrop-filter: blur(50px);
+        width: 50px;
+      }
+      .swiper-button-prev {
+        left: 0;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 5px 10px;
+        backdrop-filter: blur(50px);
+        width: 50px;
+      }
+    }
+  }
+
+  #prestation-infra {
+    .swiper-prestation {
+      .swiper-slide {
+        height: 400px;
+
+        .overlay {
+          height: 60px;
+        }
+      }
+    }
   }
 
   #evenements {
     height: auto;
+    padding: 0;
 
     .container.columns {
       .colg {
@@ -166,6 +222,85 @@
           bottom: 0px;
           height: 130px;
         }
+      }
+    }
+  }
+
+  #parallax-sky {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+
+    .parallax-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: -1;
+    }
+  }
+
+  #chef,
+  #piscine {
+    position: relative;
+
+    #backgroundChef,
+    #backgroundPiscine {
+      height: 100vh;
+      width: 100vw;
+      z-index: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #backgroundChef img,
+    #backgroundPiscine img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+
+    #text,
+    #textPiscine {
+      height: 50vh;
+      width: 80vw;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      top: 0;
+      z-index: 2;
+
+      h2 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  #section-logo {
+    padding: 50px 0;
+
+    .container {
+      gap: 20px;
+
+      .colg {
+        border: none;
+        padding-right: 0;
+        justify-content: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $light-gray;
       }
     }
   }
