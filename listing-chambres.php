@@ -12,6 +12,7 @@ get_template_part( 'templates-parts/section-citation' );
 get_template_part( 'templates-parts/fullwidth-banner' );
 
 // FAQ
+get_template_part( 'templates-parts/section-faq' );
 
 get_template_part('templates-parts/section-logo');
 get_template_part('templates-parts/section-newsletter');
