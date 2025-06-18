@@ -17,9 +17,11 @@ $logo       = get_field('logo-entreprise','options');
       </a>
 
         <?php if($logo):?>
-            <div class="block-img">
+            <a href="<?php echo get_bloginfo('url');?>">
+              <div class="block-img">
                 <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
-            </div>
+              </div>
+            </a>
         <?php endif;?>
 
         <div class="cold">
