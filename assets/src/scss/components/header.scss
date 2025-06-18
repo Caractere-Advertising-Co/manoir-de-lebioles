@@ -1,67 +1,78 @@
 @use "../abstracts/_setup.scss" as *;
 
-header {
+#banner-top {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: $light;
+  padding: 5px;
+  width: calc(100vw - 10px);
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
 
-  #banner-top {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: $light;
-    padding: 5px;
-    width: 100vw;
+  .container {
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 90vw !important;
 
-    .container {
-      justify-content: space-between;
-      align-items: center;
-      height: 30px;
-      width: 90vw !important;
+    .contact {
+      display: flex;
+      gap: 20px;
 
-      .contact {
-        display: flex;
-        gap: 20px;
-
-        a,
-        p {
-          text-decoration: none;
-          color: $light;
-          font-size: 0.7rem;
-        }
+      a,
+      p {
+        text-decoration: none;
+        color: $light;
+        font-size: 0.7rem;
       }
+    }
 
-      .rs {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
+    .rs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
 
-        a {
-          height: 20px;
-          display: block;
+      a {
+        height: 20px;
+        display: block;
 
-          img {
-            filter: invert(1);
-          }
+        img {
+          filter: invert(1);
         }
       }
     }
   }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
   #main-header {
+    min-height: 150px;
+    position: relative;
+    top: 30px;
+    background: rgba(255, 255, 255, 0);
+    transition: all ease-in-out 300ms;
+
     .content {
-      padding: 50px 0;
+      padding: 30px 0 50px;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid $light;
+      transition: all ease-in-out 300ms;
 
       a {
         text-decoration: none;
         text-transform: uppercase;
         color: $light;
         letter-spacing: 2px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
 
       #btnMegamenu {
@@ -91,6 +102,37 @@ header {
           border-left: 1px solid $light;
           background: none;
           color: $light;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    &.sticky {
+      top: 0;
+      background: $light;
+      min-height: 75px;
+      box-shadow: 0 2px 20px rgb(0 0 0 / 10%);
+
+      .content {
+        padding: 10px 0;
+        border: none;
+
+        a,
+        .cold select {
+          color: $dark;
+        }
+
+        .block-img {
+          max-width: 200px;
+          img {
+            filter: invert(1);
+          }
+        }
+
+        #btnMegamenu {
+          svg {
+            stroke: $dark;
+          }
         }
       }
     }
@@ -144,6 +186,7 @@ header {
       }
     }
   }
+
   // .circle-cursor {
   //   width: 20px; /* Adjust size as needed */
   //   height: 20px;

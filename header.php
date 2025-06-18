@@ -34,9 +34,12 @@
         get_template_part( 'templates-parts/section-popup' );
     endif;?>
 
-    <header>
         <?php get_template_part( 'templates-parts/banner' );?>
+    <header>
         <?php get_template_part( 'templates-parts/header-nav' );?>
     </header>
+
+
+
 
     <?php wp_body_open(); ?>
