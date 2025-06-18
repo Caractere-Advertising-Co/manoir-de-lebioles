@@ -36,6 +36,7 @@ document.getElementById('bdp-brevo-form').addEventListener('submit', function(e)
     credentials: 'same-origin'
   })
   .then(r => r.json())
+  console.warn(r);
   .then(data => {
     if (data.success) {
       console.warn('Inscription réussie');
