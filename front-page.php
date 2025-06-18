@@ -14,10 +14,6 @@ $ctaChambre     = get_field('cta_chambre');
 
 $skyView        = get_field('skyview-parallax','options');
 
-/* Prestation */
-
-$titrePresta    = get_field('titre-presta','options');
-$txtPresta      = get_field('txt-presta','options');
 
 /* Ardennes */
 
@@ -182,36 +178,7 @@ get_header();?>
     <?php endif;?>
 </section>
 
-<section id="prestation-infra">
-  <div class="container columns content">
-    <div class="colg">
-        <?php if($titrePresta): echo $titrePresta; endif;?>
-    </div>
-    <div class="cold">
-        <?php if($txtPresta): echo $txtPresta; endif;?>
-    </div>
-  </div>
-
-  <div class="swiper swiper-prestation">
-    <div class="swiper-wrapper">
-      <?php if(have_rows('slide-prestation')):
-        while(have_rows('slide-prestation')): the_row('slide-prestation');
-          $img   = get_sub_field('background');
-          $lien  = get_sub_field('cta');?>
-          
-          <div class="swiper-slide">
-            <a href="<?php echo $lien['url'];?>">
-                <img src="<?php echo $img['url'];?>" alt="<?php echo $img['name'];?>"/>
-                <div class="overlay"><?php echo '<h3>'.$lien['title'].'</h3>';?></div>
-            </a>
-          </div>
-        <?php endwhile;
-      endif;?>
-      </div>
-    </div>
-  </div>
-</section>
-
+<?php get_template_part( 'templates-parts/section-prestations');?>
 <?php get_template_part( 'templates-parts/section-citation' );?>
 
 <section id="sejours">
