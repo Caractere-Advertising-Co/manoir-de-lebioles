@@ -1,0 +1,172 @@
+@use "../abstracts/_setup.scss" as *;
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90vw !important;
+  }
+  .columns {
+    flex-direction: column;
+
+    .colg,
+    .cold,
+    .col {
+      width: 100% !important;
+    }
+  }
+
+  header {
+    .columns {
+      flex-direction: row !important;
+    }
+
+    #banner-top {
+      display: none;
+    }
+
+    #main-header {
+      .container {
+        flex-direction: column-reverse !important;
+        gap: 30px;
+
+        .cold {
+          display: none;
+        }
+      }
+    }
+
+    #megamenu {
+      width: 100vw;
+      transform: translateX(-100vw);
+      position: fixed;
+      justify-content: center;
+      overflow: hidden;
+
+      .content-megamenu {
+        ul {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  #hero_container {
+    .container {
+      h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 15px;
+      }
+    }
+  }
+
+  #introduction {
+    .container {
+      flex-direction: column-reverse;
+      gap: 40px;
+
+      .colg,
+      .cold {
+        width: 100%;
+      }
+
+      .colg {
+        .block-img {
+          width: 100%;
+          height: 370px;
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+
+      &.img {
+        flex-direction: column;
+      }
+
+      .cold {
+        .block-galerie {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  #chambres-suites {
+    .container {
+      .swiper-button-next {
+        right: 0;
+      }
+      .swiper-button-prev {
+        left: 0;
+      }
+    }
+  }
+
+  #citation,
+  #fullwidth-banner {
+    .cta-line {
+      padding: 5px 80px;
+    }
+  }
+
+  #galerie-ardennes {
+    height: 300px;
+    .bigImg {
+      height: 300px;
+      width: 50vw;
+    }
+
+    .smallImg1,
+    .smallImg2,
+    .smallImg3,
+    .smallImg4 {
+      height: 150px;
+      width: 25vw;
+    }
+
+    // .bigImg {
+    //   grid-area: 1 / 1 / 2 / 3;
+    // }
+    // .smallImg1 {
+    //   grid-area: 2 / 1 / 3 / 2;
+    // }
+    // .smallImg2 {
+    //   grid-area: 2 / 2 / 3 / 3;
+    // }
+    // .smallImg3 {
+    //   grid-area: 3 / 1 / 4 / 2;
+    // }
+    // .smallImg4 {
+    //   grid-area: 3 / 2 / 4 / 3;
+    // }
+  }
+
+  #evenements {
+    height: auto;
+
+    .container.columns {
+      .colg {
+        .swiper-events {
+          height: 550px;
+
+          .swiper-wrapper {
+            .swiper-slide {
+              height: 500px;
+            }
+          }
+        }
+        .blockDark {
+          right: 5vw;
+          bottom: 0px;
+          height: 130px;
+        }
+      }
+    }
+  }
+}

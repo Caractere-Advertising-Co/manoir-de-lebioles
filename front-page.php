@@ -73,7 +73,7 @@ get_header();?>
             endwhile;
         endif;?>
     </div>
-    <div class="container columns content">
+    <div class="container columns content img">
         <?php if(have_rows('colonne_gauche')):
             while(have_rows('colonne_gauche')): the_row();?>
             <div class="colg">

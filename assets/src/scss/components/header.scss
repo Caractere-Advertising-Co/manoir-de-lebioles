@@ -7,7 +7,7 @@ header {
   z-index: 2;
 
   #banner-top {
-    background-color: $primary-color;
+    background-color: rgba(0, 0, 0, 0.3);
     color: $light;
     padding: 5px;
     width: 100vw;
@@ -25,7 +25,7 @@ header {
         a,
         p {
           text-decoration: none;
-          color: $middle-gray;
+          color: $light;
           font-size: 0.7rem;
         }
       }
@@ -42,7 +42,7 @@ header {
           display: block;
 
           img {
-            filter: invert(1) brightness(0.4);
+            filter: invert(1);
           }
         }
       }
