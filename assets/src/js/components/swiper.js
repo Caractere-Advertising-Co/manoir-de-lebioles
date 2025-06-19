@@ -1,7 +1,7 @@
 // index.js
 
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css"; // utile si tu utilises les styles par défaut
 import "swiper/css/navigation"; // styles pour les flèches, optionnel
@@ -41,7 +41,7 @@ window.addEventListener("load", () => {
   });
 
   const swiperHero = new Swiper(".swiper-hero", {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
 
     slidesPerView: 1,
     spaceBetween: 0,
