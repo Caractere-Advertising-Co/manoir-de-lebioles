@@ -46,7 +46,11 @@ window.addEventListener("load", () => {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
-    autoplay: true,
+    autoplay: {
+      delay: 5000, // 5000 ms = 5 secondes par slide
+      disableOnInteraction: false, // pour que l'autoplay continue après un swipe manuel
+    },
+    speed: 800, // durée de transition entre les slides (en ms)
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

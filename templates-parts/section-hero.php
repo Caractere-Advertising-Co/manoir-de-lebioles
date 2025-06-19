@@ -11,7 +11,7 @@ $galerie = get_field('galerie-hero');
             $titreHero      = $g['titre_hero'];
             $subTitleHero   = $g['soustitre_hero'];
         ?>
-            <div class="swiper-slide" style="background:url('<?php if($hero): echo $hero['url'];endif;?>');background-size:cover;">
+            <div class="swiper-slide" style="background:url('<?php if($hero): echo $hero['url'];endif;?>');background-size:cover;" data-swiper-autoplay="5000">
                 <div class="container from-left">
                     <?php if($titreHero): echo $titreHero; endif;?>
                     <?php if($subTitleHero): echo $subTitleHero; endif;?>
