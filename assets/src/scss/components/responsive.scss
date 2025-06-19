@@ -35,8 +35,10 @@
         }
       }
 
-      &.sticky > #megamenu.active {
-        background-color: red;
+      &.megamenu-open {
+        background: none;
+        filter: invert(1);
+        box-shadow: none;
       }
     }
 

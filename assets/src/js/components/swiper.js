@@ -1,10 +1,11 @@
 // index.js
 
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css"; // utile si tu utilises les styles par défaut
 import "swiper/css/navigation"; // styles pour les flèches, optionnel
+import "swiper/css/pagination"; // styles pour les flèches, optionnel
 
 import "fslightbox";
 
@@ -36,6 +37,19 @@ window.addEventListener("load", () => {
         slidesPerView: 3,
         spaceBetween: 30,
       },
+    },
+  });
+
+  const swiperHero = new Swiper(".swiper-hero", {
+    modules: [Navigation, Pagination],
+
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
   });
 

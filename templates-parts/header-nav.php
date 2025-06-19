@@ -83,6 +83,9 @@ btn.addEventListener('click', () => {
   if (!isOpen) {
     // Ouverture
     megaMenu.classList.add('active');
+    document.getElementById("main-header").classList.add('megamenu-open');
+
+    
     svgOpenAnim.beginElement();
 
     setTimeout(() => {
@@ -96,6 +99,8 @@ btn.addEventListener('click', () => {
 
     setTimeout(() => {
       megaMenu.classList.remove('active');
+      document.getElementById("main-header").classList.remove('megamenu-open');
+
       isAnimating = false;
     }, 500);
   }
