@@ -1,0 +1,98 @@
+@use "../abstracts/_setup.scss" as *;
+
+#listing-chambres {
+  padding: 100px 0;
+
+  .container {
+    justify-content: space-between;
+    gap: 20px;
+
+    .card-rooms {
+      position: relative;
+
+      a {
+        &:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          display: block;
+          z-index: 1;
+          background-color: $dark;
+          opacity: 0.5;
+          position: absolute;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+        }
+
+        text-decoration: none;
+      }
+
+      .titleRoom {
+        position: relative;
+        z-index: 5;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        font-family: $Ivy;
+        color: $light;
+        font-size: 1.2rem;
+        opacity: 0;
+        letter-spacing: 1px;
+        transform: translateY(20px);
+        transition: all ease-in-out 500ms;
+      }
+
+      .block-img {
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+          transform: scale(1);
+          filter: blur(0px);
+          transition: all ease-in-out 500ms;
+        }
+      }
+
+      &:hover {
+        .block-img {
+          img {
+            transform: scale(1.2);
+            filter: blur(10px);
+          }
+        }
+
+        .titleRoom {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &.-col3 {
+      .card-rooms {
+        width: 33.3%;
+        height: 550px;
+      }
+    }
+
+    &.-col2 {
+      margin-top: 20px;
+
+      .card-rooms {
+        width: 50%;
+        height: 350px;
+      }
+    }
+  }
+}

@@ -30,7 +30,6 @@ $txtPresta      = get_field('txt-presta','options');
           </div>
         <?php endwhile;
       endif;?>
-      </div>
     </div>
   </div>
 </section>

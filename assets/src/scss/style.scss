@@ -4,14 +4,16 @@
 @use "./components/footer.scss" as *;
 @use "./components/contact.scss" as *;
 @use "./components/cta.scss" as *;
+@use "./components/listing-chambres.scss" as *;
 @use "./sections/section-citation.scss" as *;
 @use "./sections/section-events.scss" as *;
+@use "./sections/section-discover.scss" as *;
 @use "./sections/section-newsletter.scss" as *;
 @use "./sections/section-actualites.scss" as *;
 @use "./sections/section-logos.scss" as *;
 @use "./sections/section-faq.scss" as *;
 @use "./components/fullwidth.scss" as *;
-
+@use "./components/single-chambre.scss" as *;
 @use "./components/front-page.scss" as *;
 
 @use "./components/responsive.scss" as *;

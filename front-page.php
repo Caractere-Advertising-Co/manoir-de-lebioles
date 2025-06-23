@@ -181,28 +181,7 @@ get_header();?>
 
 <?php get_template_part( 'templates-parts/section-prestations');?>
 <?php get_template_part( 'templates-parts/section-citation' );?>
-
-<section id="sejours">
-      <div class="container columns">
-        <?php if(have_rows('sejours')):
-        $i = 0;
-        while(have_rows('sejours')): the_row('sejours');
-        
-          $bg = get_sub_field('background');
-          $titre = get_sub_field('titre_sejour');
-          $lien = get_sub_field('lien');?>
-        
-        <div class="col from-bottom <?php echo $i != 0 ? '-slow' : '';?>">
-          <div class="block-img">
-            <img src="<?php echo $bg['url'];?>" alt="<?php echo $bg['title'];?>"/>
-          </div>
-          <h4><?php echo $titre;?></h4>
-          <a href="<?php echo $lien['url'];?>" class="cta-line"><?php echo $lien['title'];?></a>
-        </div>
-        <?php $i++; endwhile;
-      endif;?>
-      </div>
-</section>
+<?php get_template_part( 'templates-parts/section-sejours' );?>
 
 <?php get_template_part( 'templates-parts/fullwidth-banner' );?>
 

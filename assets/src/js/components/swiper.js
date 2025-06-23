@@ -74,6 +74,28 @@ window.addEventListener("load", () => {
     modules: [Navigation],
   });
 
+  const swiperChambre = new Swiper(".swiper-galerie-chambre", {
+    modules: [Navigation],
+    slidesPerView: 3,
+    spaceBetween: 15,
+    loop: true,
+    navigation: {
+      nextEl: ".btnNextGalChambre",
+      prevEl: ".btnPrevGalChambre",
+    },
+  });
+
+  const discoverRooms = new Swiper(".swiper-discover", {
+    modules: [Navigation],
+    slidesPerView: 2.7,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: ".discoverBtnNext",
+      prevEl: ".discoverBtnPrev",
+    },
+  });
+
   // Click listener une fois que tout est chargé
   const container = document.getElementById("lightbox-container");
 
