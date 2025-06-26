@@ -8,8 +8,10 @@ $form     = get_field('shortcode-form');
 
 <section id="section-form-contact">
     <div class="container content">
-        <?php if($surtitre): echo $surtitre; endif;?>
-        <?php if($titre): echo $titre; endif;?>
+        <div class="group-title">
+            <?php if($surtitre): echo '<h3>'.$surtitre.'</h3>'; endif;?>
+            <?php if($titre): echo $titre; endif;?>
+        </div>
         <?php if($form): echo do_shortcode( $form ); endif;?>
     </div>
 </section>
