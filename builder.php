@@ -88,6 +88,8 @@ get_template_part('templates-parts/section-hero');
         get_template_part( 'templates-parts/section-experience-unique' );
       elseif( get_row_layout() == "chef"):
         get_template_part( 'templates-parts/section-chef' );
+      elseif( get_row_layout() == "prestation"):
+        get_template_part( 'templates-parts/section-prestations' );
       endif;
     endwhile;
   endif;?>
