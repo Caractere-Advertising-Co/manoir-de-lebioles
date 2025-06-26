@@ -85,6 +85,17 @@ window.addEventListener("load", () => {
     },
   });
 
+  const swiperBuilder = new Swiper(".swiper-galerie-builder", {
+    modules: [Navigation],
+    slidesPerView: 3,
+    spaceBetween: 15,
+    loop: true,
+    navigation: {
+      nextEl: ".btnNextGalBuilder",
+      prevEl: ".btnPrevGalBuilder",
+    },
+  });
+
   const discoverRooms = new Swiper(".swiper-discover", {
     modules: [Navigation],
     slidesPerView: 2.7,

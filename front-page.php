@@ -24,11 +24,6 @@ $txtArdennes    = get_field('texte-ardennes');
 $imgArdennes    = get_field('image-ardennes');
 $ctaArdennes    = get_field('cta-ardennes');
 
-/* Chef */
-
-$bgChef         = get_field('bg-chef');
-$txtChef        = get_field('txt-chef');
-$ctaChef        = get_field('cta-chef');
 
 /* Piscine */
 
@@ -240,19 +235,7 @@ get_header();?>
 </section>
 
 <?php get_template_part( 'templates-parts/section-evenements' );?>
-
-<section id="chef">
-  <?php if($bgChef):?>
-    <div id="backgroundChef">
-      <img src="<?php echo $bgChef['url'];?>" alt="<?php echo $bgChef['title'];?>">
-    </div>
-  <?php endif;?>
-  <div id="text">
-    <div class="text">
-      <?php if($txtChef): echo $txtChef; endif;?>
-    </div>
-  </div>
-</section>
+<?php get_template_part( 'templates-parts/section-chef');?>
 
 <section id="piscine">
   <?php if($bgPiscine):?>

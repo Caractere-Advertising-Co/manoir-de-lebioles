@@ -13,7 +13,7 @@ $tel = get_field('telephone_top_header','options');?>
             <?php 
             
             $rs = get_field('rs_top_header','options');
-
+            echo do_shortcode( '[wpml_language_selector_widget]');
             if($rs):
                 foreach($rs as $r):
                     $icone = $r['icone'];

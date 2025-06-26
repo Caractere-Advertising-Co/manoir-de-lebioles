@@ -5,7 +5,7 @@
   color: $light;
   padding: 5px;
   width: calc(100vw - 10px);
-  z-index: 1;
+  z-index: 5;
   position: absolute;
   top: 0;
   left: 0;
@@ -41,6 +41,27 @@
 
         img {
           filter: invert(1);
+        }
+      }
+
+      .wpml-ls {
+        width: 60px;
+        filter: invert(1);
+        margin-right: 15px;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        border-right: 1px solid $dark;
+
+        ul {
+          li {
+            a {
+              color: $dark;
+              background: none;
+              border: none;
+            }
+          }
         }
       }
     }
@@ -89,6 +110,7 @@ header {
         display: flex;
         align-items: center;
         gap: 5px;
+        width: 33.3%;
 
         svg {
           height: 20px;
@@ -101,16 +123,28 @@ header {
 
       .cold {
         display: flex;
-        gap: 20px;
+        gap: 10px;
         justify-content: flex-end;
+        align-items: center;
+        width: 33.3%;
 
-        select {
-          padding-left: 20px;
-          border: none;
-          border-left: 1px solid $light;
+        .cta {
+          font-size: 0.7rem;
           background: none;
-          color: $light;
-          font-size: 0.8rem;
+          padding: 7px 30px;
+
+          &:after {
+            content: inherit;
+          }
+
+          &.-gold {
+            background-color: $gold-color;
+            text-wrap: no-wrap;
+
+            &::after {
+              content: "";
+            }
+          }
         }
       }
     }
@@ -128,9 +162,11 @@ header {
         padding: 15px 0;
         border: none;
 
-        a,
-        .cold select {
+        a {
           color: $dark;
+        }
+        .cold .-gold {
+          color: $light;
         }
 
         .block-img {

@@ -1,6 +1,7 @@
 <?php 
 
 $logo       = get_field('logo-entreprise','options');
+$blockCTA   = get_field('groupe_cta_header','options');
 
 ?>
 <div id="sticky-trigger"></div>
@@ -25,11 +26,18 @@ $logo       = get_field('logo-entreprise','options');
         <?php endif;?>
 
         <div class="cold">
-            <a href="#">Contact</a>
-            <select>
-                <option>FR</option>
-                <option>NL</option>
-            </select>
+          <?php if($blockCTA): $i = 0; 
+            foreach($blockCTA as $cta):
+                $link = $cta['url'];
+
+                $i == 0 ? $class = 'cta' : $class = 'cta -gold';
+
+                if($link): 
+                  echo '<a href="'.$link['url'].'" class="'.$class.'">'.$link['title'].'</a>';
+                endif;
+                $i++;
+            endforeach;
+          endif;?>
         </div>
     </div>
 </section>
@@ -44,11 +52,15 @@ $logo       = get_field('logo-entreprise','options');
 </section>
 
     <div class="circle-cursor"></div>
-<script>const btn = document.getElementById('btnMegamenu');
+<script>
+
+const btn = document.getElementById('btnMegamenu');
 const megaMenu = document.getElementById('megamenu');
 const svgOpenAnim = document.getElementById('animate_open');
 const svgCloseAnim = document.getElementById('animate_close');
 const menuItems = [...megaMenu.querySelectorAll('.content-megamenu ul li')];
+const topHeader = document.getElementById('banner-top');
+
 let isAnimating = false;
 
 function showItems() {
@@ -75,6 +87,7 @@ function hideItems() {
 }
 
 btn.addEventListener('click', () => {
+
   if (isAnimating) return;
   isAnimating = true;
 
@@ -83,6 +96,8 @@ btn.addEventListener('click', () => {
   if (!isOpen) {
     // Ouverture
     megaMenu.classList.add('active');
+      topHeader.style.zIndex = "1";
+
     document.getElementById("main-header").classList.add('megamenu-open');
 
     
@@ -96,6 +111,8 @@ btn.addEventListener('click', () => {
     // Fermeture
     hideItems();
     svgCloseAnim.beginElement();
+      topHeader.style.zIndex = "5";
+
 
     setTimeout(() => {
       megaMenu.classList.remove('active');

@@ -51,7 +51,7 @@ get_template_part( 'templates-parts/section-hero');
     </div>
 </section>
 
-<section id="informations-chambre">
+<section id="informations-toggle">
     <div class="container listing-infos">
         <?php if(have_rows('informations')):
             while(have_rows('informations')): the_row('informations');

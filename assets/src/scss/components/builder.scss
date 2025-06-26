@@ -1,0 +1,52 @@
+@use "../abstracts/_setup.scss" as *;
+
+#acf-modulable-content {
+  #informations-toggle {
+    .container {
+      width: 80vw;
+      padding-left: 0;
+      margin: auto;
+    }
+  }
+
+  #galerie-builder {
+    padding: 50px 0;
+
+    .container {
+      position: relative;
+
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            height: 250px;
+
+            a {
+              display: block;
+              overflow: hidden;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .btnPrevGalBuilder {
+        left: -80px;
+
+        &::after {
+          font-size: 1.5rem;
+          color: $light-gray;
+        }
+      }
+
+      .btnNextGalBuilder {
+        right: -80px;
+
+        &::after {
+          font-size: 1.5rem;
+          color: $light-gray;
+        }
+      }
+    }
+  }
+}

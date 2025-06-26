@@ -1,8 +1,14 @@
 <?php 
 
-$fullWidth = get_field('bg-fullwidth','options');
-$titre     = get_field('title-fullwidth','options');
-$cta       = get_field('cta-fullwidth','options');
+$fullWidth = get_field('bg-fullwidth');
+$titre     = get_field('title-fullwidth');
+$cta       = get_field('cta-fullwidth');
+
+if(empty($fullWidth)):
+    $fullWidth = get_field('bg-fullwidth','options');
+    $titre     = get_field('title-fullwidth','options');
+    $cta       = get_field('cta-fullwidth','options');
+endif;
 
 ?>
 
