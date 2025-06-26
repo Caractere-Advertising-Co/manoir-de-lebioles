@@ -14,7 +14,7 @@
   "author": "Caractere (Benoit Londero)",
   "license": "ISC",
   "dependencies": {
-    "fslightbox": "^3.4.1",
+    "fslightbox": "^3.6.1",
     "gsap": "^3.12.5",
     "in-view": "^0.6.1",
     "isotope": "^1.0.0-alpha.3",

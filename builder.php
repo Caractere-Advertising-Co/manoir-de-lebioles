@@ -72,7 +72,7 @@ get_template_part('templates-parts/section-hero');
                         <?php if($galerie): 
                             foreach($galerie as $g):?>
                                 <div class="swiper-slide">
-                                    <a fslightbox href="<?php echo $g['url'];?>" class="block-img">
+                                    <a data-fslightbox href="<?php echo $g['url'];?>" class="block-img">
                                         <img src="<?php echo $g['url'];?>" alt="<?php echo $g['title'];?>"/>
                                     </a>
                                 </div>

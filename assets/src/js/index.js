@@ -4,6 +4,8 @@ import { scrollChefZoom } from "./components/scaleScroll.js";
 initSkyParallax();
 initFullParallax();
 
+require("fslightbox");
+
 /* Section Chef */
 
 const section = document.getElementById("backgroundChef");
