@@ -90,6 +90,8 @@ get_template_part('templates-parts/section-hero');
         get_template_part( 'templates-parts/section-chef' );
       elseif( get_row_layout() == "prestation"):
         get_template_part( 'templates-parts/section-prestations' );
+      elseif( get_row_layout() == "saveurs"):
+        get_template_part( 'templates-parts/section-saveurs' );
       endif;
     endwhile;
   endif;?>

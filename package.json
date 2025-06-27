@@ -20,6 +20,7 @@
     "isotope": "^1.0.0-alpha.3",
     "isotope-layout": "^3.0.6",
     "lodash": "^4.17.21",
+    "rellax": "^1.12.1",
     "swiper": "^11.2.8"
   },
   "devDependencies": {

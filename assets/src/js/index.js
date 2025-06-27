@@ -1,10 +1,16 @@
 import { initSkyParallax, initFullParallax } from "./components/parallax.js";
 import { scrollChefZoom } from "./components/scaleScroll.js";
+import Rellax from "rellax";
 
 initSkyParallax();
 initFullParallax();
 
 require("fslightbox");
+
+/* Rellax Paralax */
+var rellax = new Rellax(".rellax", {
+  breakpoints: [576, 768, 1201],
+});
 
 /* Section Chef */
 

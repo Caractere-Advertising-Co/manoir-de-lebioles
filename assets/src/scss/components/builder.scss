@@ -55,6 +55,50 @@
   }
 }
 
+#saveurs-parallax {
+  padding: 100px 0 0;
+  max-height: 80vh;
+
+  .container {
+    .colg {
+      width: 35%;
+      position: relative;
+
+      h2 {
+        color: $primary-color;
+        letter-spacing: 0;
+        font-weight: 200;
+        margin-bottom: 400px;
+
+        em {
+          font-style: italic;
+          font-weight: 100;
+        }
+
+        strong em,
+        strong,
+        em strong {
+          font-weight: 400;
+        }
+      }
+
+      .block-img {
+        height: 450px;
+      }
+    }
+
+    .cold {
+      width: 65%;
+      position: relative;
+      margin-top: -100px;
+
+      .block-img {
+        height: 450px;
+      }
+    }
+  }
+}
+
 #section-form-contact {
   .group-title {
     margin: 100px auto 50px;
