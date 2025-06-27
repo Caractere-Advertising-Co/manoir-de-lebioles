@@ -504,24 +504,32 @@
     top: 0;
     z-index: 2;
 
-    h2,
-    h3 {
-      color: $light;
-    }
+    .container {
+      gap: 20px;
+      align-items: flex-end;
+      justify-content: space-between;
 
-    h2 {
-      letter-spacing: 1px;
-      font-weight: 400;
-      font-size: 5rem;
-      line-height: 4.5rem;
-      margin-bottom: 30px;
-    }
+      .colg {
+        h2,
+        h3 {
+          color: $light;
+        }
 
-    h3 {
-      font-weight: 200;
-      font-size: 3rem;
-      line-height: 3rem;
-      font-style: italic;
+        h2 {
+          letter-spacing: 1px;
+          font-weight: 400;
+          font-size: 5rem;
+          line-height: 4.5rem;
+          margin-bottom: 30px;
+        }
+
+        h3 {
+          font-weight: 200;
+          font-size: 3rem;
+          line-height: 3rem;
+          font-style: italic;
+        }
+      }
     }
   }
 

@@ -47,6 +47,12 @@
       background-color: $dark;
     }
   }
+
+  &.-border {
+    border: 1px solid $light;
+    border-radius: 25px;
+    overflow: hidden;
+  }
 }
 
 .cta-white {
