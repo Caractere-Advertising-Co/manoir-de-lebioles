@@ -54,7 +54,7 @@ $paraphBottom   = get_sub_field('txt-bottom-droite');
                 </div>
             <?php endif;?>
 
-            <div class="block-intro rellax" data-rellax-speed="1">
+            <div class="block-intro">
                 <?php if($paraphBottom): echo $paraphBottom; endif;?>
             </div>
         </div>
