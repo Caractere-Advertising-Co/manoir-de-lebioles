@@ -7,7 +7,7 @@ $ctaFullscreen        = get_sub_field('cta_fullscreen');
 
 ?>
 
-<section id="section-image-fullscreen">
+<section id="section-image-fullscreen" class="from-bottom">
   <?php if($bgFullScreen):?>
     <div id="backgroundFullScreen">
       <img src="<?php echo $bgFullScreen['url'];?>" alt="<?php echo $bgFullScreen['title'];?>">

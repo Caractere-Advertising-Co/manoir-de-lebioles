@@ -1,7 +1,7 @@
 @use "../abstracts/setup" as *;
 
 #intro-about {
-  padding: 100px 0;
+  padding: 50px 0;
 
   .container.-top {
     margin-right: 0;
@@ -56,6 +56,7 @@
     width: 85vw !important;
     margin-left: 0;
     gap: 180px;
+    max-height: 110vh;
 
     .colg {
       width: calc(55% + 15vw + 180px);
