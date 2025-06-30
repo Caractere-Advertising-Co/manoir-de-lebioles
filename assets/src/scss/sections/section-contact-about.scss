@@ -1,0 +1,35 @@
+#section-contact-about {
+  padding: 100px 0;
+
+  .columns {
+    margin-left: 0;
+    width: 85vw !important;
+
+    .colg {
+      height: 80vh;
+      width: 40%;
+
+      .block-img {
+        height: 80vh;
+      }
+    }
+
+    .cold {
+      width: calc(55% - 100px);
+      position: relative;
+
+      .block-img {
+        width: 250px;
+        height: 350px;
+        left: 50px;
+        position: relative;
+        top: 300px;
+        z-index: 10;
+      }
+
+      .cta {
+        margin-top: 50px;
+      }
+    }
+  }
+}

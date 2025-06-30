@@ -1,0 +1,52 @@
+#section-image-fullscreen {
+  #backgroundFullScreen {
+    img {
+      position: relative;
+    }
+  }
+
+  #textFullscreen {
+    width: 100vw !important;
+    max-width: 100%;
+
+    .container {
+      &.text {
+        width: 70vw !important;
+        padding: 0 15vw;
+        height: 440px;
+        align-items: center;
+        justify-content: flex-start;
+
+        .colg {
+          h2 {
+            font-size: 3.8rem;
+            font-weight: 200;
+            font-style: italic;
+            line-height: 4rem;
+            margin: -200px auto 0;
+            position: relative;
+            z-index: 5;
+          }
+        }
+      }
+    }
+
+    &.show {
+      .text {
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            rgb(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 01) 80%
+          );
+          z-index: 3;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

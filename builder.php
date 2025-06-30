@@ -92,13 +92,25 @@ get_template_part('templates-parts/section-hero');
         get_template_part( 'templates-parts/section-prestations' );
       elseif( get_row_layout() == "saveurs"):
         get_template_part( 'templates-parts/section-saveurs' );
+      elseif( get_row_layout() == "section_two_columns"):
+        get_template_part( 'templates-parts/section-2-columns' );
+      elseif( get_row_layout() == "new-era"):
+        get_template_part( 'templates-parts/section-new-era' );
+      elseif( get_row_layout() == "image-fullscreen"):
+        get_template_part( 'templates-parts/section-image-fullscreen' );
+      elseif( get_row_layout() == "intro-about"):
+        get_template_part( 'templates-parts/section-intro-about' );
+      elseif( get_row_layout() == "section-about-contact"):
+        get_template_part( 'templates-parts/section-contact-about');
+      elseif( get_row_layout() == "banner-fullwidth"):
+        get_template_part('templates-parts/fullwidth-banner');
+      elseif( get_row_layout() == "banner-form-contact"):
+       get_template_part('templates-parts/section-contact');
       endif;
     endwhile;
   endif;?>
 </main>
 
-<?php get_template_part('templates-parts/fullwidth-banner');?>
-<?php get_template_part('templates-parts/section-contact');?>
 <?php get_template_part('templates-parts/section-logo');?>
 <?php get_template_part('templates-parts/section-newsletter');?>
 <?php get_footer(); ?>

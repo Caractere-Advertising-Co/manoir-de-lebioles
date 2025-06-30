@@ -28,6 +28,15 @@ const txtPiscine = document.getElementById("textPiscine");
 
 scrollChefZoom(sectionPiscine, bgPiscine, txtPiscine);
 
+const imgfullScreen = document.getElementById("backgroundFullScreen");
+
+if (imgfullScreen) {
+  const bgFullScreen = document.querySelector("#backgroundFullScreen img");
+  const txtFullScreen = document.getElementById("textFullscreen");
+
+  scrollChefZoom(imgfullScreen, bgFullScreen, txtFullScreen);
+}
+
 import "./components/animate.js";
 import "./components/swiper.js";
 import "./components/stickyMenu.js";

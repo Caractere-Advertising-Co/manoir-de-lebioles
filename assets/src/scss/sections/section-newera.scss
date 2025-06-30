@@ -1,0 +1,36 @@
+@use "../abstracts/setup" as *;
+
+#section-new-era {
+  padding: 100px 0;
+
+  .container {
+    .colg {
+      width: 60%;
+
+      .block-img {
+        margin-top: 50px;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+    }
+
+    .cold {
+      width: 40%;
+
+      h2 {
+        letter-spacing: 0;
+        color: $primary-color;
+        margin-bottom: 50px;
+
+        strong {
+          font-weight: 600;
+          font-style: italic;
+        }
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

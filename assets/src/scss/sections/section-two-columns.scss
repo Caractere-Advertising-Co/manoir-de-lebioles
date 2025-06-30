@@ -1,0 +1,24 @@
+@use "../abstracts/setup" as *;
+
+#section-two-columns {
+  padding: 100px 0;
+
+  .container {
+    .colg {
+      width: 45%;
+
+      .block-img {
+        margin-top: 50px;
+      }
+    }
+
+    .cold {
+      width: 55%;
+
+      .block-img {
+        aspect-ratio: 1;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
