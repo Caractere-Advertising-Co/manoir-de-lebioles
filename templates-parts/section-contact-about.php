@@ -11,7 +11,7 @@ $ctaContact = get_sub_field('cta-about-contact');
     <div class="container columns">
         <div class="colg">
             <?php if($imgG):?>
-                <div class="block-img">
+                <div class="block-img from-left">
                     <img src="<?php echo $imgG['url'];?>" alt="<?php echo $imgG['title'];?>"/>
                 </div>
             <?php endif;?>
@@ -25,7 +25,7 @@ $ctaContact = get_sub_field('cta-about-contact');
 
             <?php if($txtContact): echo $txtContact; endif;?>
             <?php if($ctaContact):?>
-                <a href="<?php echo $ctaContact['url'];?>" class="cta"><?php echo $ctaContact['title'];?></a>
+                <a href="<?php echo $ctaContact['url'];?>" class="cta from-bottom"><?php echo $ctaContact['title'];?></a>
             <?php endif;?>
         </div>
     </div>

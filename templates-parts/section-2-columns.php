@@ -12,10 +12,10 @@ $cta    = get_sub_field('cta-2-columns');
     <div class="container content columns">
         <div class="colg">
             <?php if($intro): echo $intro; endif;?>
-            <?php if($imgG): echo '<div class="block-img"><img src="'.$imgG['url'].'" alt="'.$imgG['title'].'"/></div>'; endif;?>
+            <?php if($imgG): echo '<div class="block-img from-left"><img src="'.$imgG['url'].'" alt="'.$imgG['title'].'"/></div>'; endif;?>
         </div>
         <div class="cold">
-            <?php if($imgD): echo '<div class="block-img"><img src="'.$imgD['url'].'" alt="'.$imgD['title'].'"/></div>'; endif;?>
+            <?php if($imgD): echo '<div class="block-img from-right"><img src="'.$imgD['url'].'" alt="'.$imgD['title'].'"/></div>'; endif;?>
             <?php if($paraph): echo $paraph; endif;?>
             <?php if($cta):?>
                 <a href="<?php echo $cta['url'];?>" class="cta"><?php echo $cta['title'];?></a>

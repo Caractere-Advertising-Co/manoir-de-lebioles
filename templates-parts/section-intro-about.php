@@ -42,12 +42,12 @@ $paraphBottom   = get_sub_field('txt-bottom-droite');
     <div class="container columns -bottom">
         <div class="colg">
             <?php if($imgGFull):?>
-                <div class="block-img">
+                <div class="block-img from-left">
                     <img src="<?php echo $imgGFull['url'];?>" alt="<?php echo $imgGFull['title'];?>"/>
                 </div>
             <?php endif;?>
         </div>
-        <div class="cold">
+        <div class="cold from-right">
             <?php if($miniatureD):?>
                 <div class="block-img rellax" data-rellax-speed="2">
                     <img src="<?php echo $miniatureD['url'];?>" alt="<?php echo $miniatureD['title'];?>"/>
