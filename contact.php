@@ -1,40 +1,28 @@
 <?php 
 /* Template Name: Page Contact */
 
-get_header();
-
-$title          = get_field('titre'); 
+$title          = get_field('titre-contact','options');
+$surtitre       = get_field('sub_contact','options');
+$intro          = get_field('texte-contact','options');
 $form           = get_field('shortcode_form','options');
 
-$titleInfos     = get_field('titreInfos');
-$adresse        = get_field('adresse');
+$heroBg         = get_field('hero_background','options');
 
-$maps           = get_field('maps','options');
+$args = array( 
+    'background' => $heroBg['url'],
+    'title'      => $title,
+    'surtitre'   => $surtitre,
+    'intro'      => $intro,
+    'form'       => $form
+);
 
-?>
 
-<section id="formulaire-contact">
-    <div class="container">
-        <?php if($title): echo $title; endif;?>
-    </div>
-    <div class="container flex flex-row gap-[100px]">
-        <div class="basis-3/4 ">
-            <?php if($form): echo do_shortcode($form); endif;?>
-        </div>
-        <div class="basis-1/4">
-            <?php if($titleInfos): echo $titleInfos; endif;?>
-            <?php if($adresse): echo $adresse; endif;?>
-        </div>
-    </div>
-</section>
+get_header();
+get_template_part('templates-parts/section-hero','hero', $args);?>
 
-<section id="maps">
-    <?php if($maps):?>
-        <div class="block-img">
-            <img src="<?php echo $maps['url'];?>" alt="<?php echo $maps['title'];?>"/>
-        </div>
-    <?php endif;?>
-</section>
+<?php get_template_part('templates-parts/section-faq');?>
+<?php get_template_part('templates-parts/section-logo');?>
+<?php get_template_part('templates-parts/section-newsletter');?>
 
-<?php get_template_part( "templates-parts/section-citation" );?>
-<?php get_footer();?>
+<?php get_footer(); ?>
+

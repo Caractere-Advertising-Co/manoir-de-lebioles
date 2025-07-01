@@ -15,7 +15,6 @@ if($galerie):?>
             $heroUrl        = $g['url'];
             $super          = get_field('superficie');
             $nbres          = get_field('nbre-personne');
-
         else : 
             $hero           = $g['hero'];
             $heroUrl        = $hero['url'];
@@ -47,15 +46,36 @@ if($galerie):?>
     <div class="swiper-pagination"></div>
 </div>
 
+<?php 
+elseif (is_page_template( 'contact.php' )):
+    $heroUrl      = $args['background'];
+    $titreHero    = $args['title'];
+    $subTitleHero = $args['surtitre'];
+    $intro        = $args['intro'];
+    $form         = $args['form'];?>
+
+    <div id="hero_container" style="background:url('<?php if($heroUrl): echo $heroUrl;endif;?>');background-size:cover;">
+        <div class="container columns from-left">
+            <div class="colg">
+                <?php if($subTitleHero): echo '<h2>'.$subTitleHero.'</h2>'; endif;?>
+                <?php if($titreHero): echo $titreHero; endif;?>
+                <?php if($intro): echo $intro; endif;?>
+            </div>
+            <div class="cold">
+                <?php if($form): echo do_shortcode($form); endif;?>
+            </div>   
+        </div>
+    </div>
 <?php else:
     
     $hero           = get_field('hero');
+    $heroUrl        = $hero['url'];
     $titreHero      = get_field('titre_hero');
     $subTitleHero   = get_field('soustitre_hero');    
 
 ?>
 
-    <div id="hero_container" style="background:url('<?php if($hero): echo $hero['url'];endif;?>');background-size:cover;">
+    <div id="hero_container" style="background:url('<?php if($heroUrl): echo $heroUrl;endif;?>');background-size:cover;">
         <div class="container from-left">
             <?php if($titreHero): echo $titreHero; endif;?>
             <?php if($subTitleHero): echo $subTitleHero; endif;?>

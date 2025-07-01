@@ -17,9 +17,9 @@ $paraphBottom   = get_sub_field('txt-bottom-droite');
     <div class="container columns -top">
         <div class="colg">
             <div class="group-intro">
-                <?php if($imgD):?>
+                <?php if($miniature):?>
                     <div class="block-img from-left">
-                        <img src="<?php echo $imgD['url'];?>" alt="<?php echo $imgD['title'];?>"/>
+                        <img src="<?php echo $miniature['url'];?>" alt="<?php echo $miniature['title'];?>"/>
                     </div>
                 <?php endif;?>
                 <div class="block-text from-bottom">
