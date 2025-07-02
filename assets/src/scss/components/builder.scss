@@ -315,3 +315,18 @@
     }
   }
 }
+
+#popup-video {
+  backdrop-filter: brightness(0.3);
+  position: fixed;
+  top: calc((100vh - 720px) / 2);
+  left: calc((100vw - 1280px) / 2);
+  opacity: 0;
+  transform: scale(0);
+  transition: all ease 300ms;
+
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
