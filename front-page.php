@@ -1,32 +1,23 @@
 <?php 
 
-// $hero           = get_field('hero');
-// $titreHero      = get_field('titre_hero');
-// $subTitleHero   = get_field('soustitre_hero');
+$builder = 'templates-parts/builder';
 
 $ctaSej         = get_field('cta_citation'); 
 
 /* Chambre */
-
 $titreChambre   = get_field('titre-chambre');
 $txtChambre     = get_field('txt-chambre');
 $ctaChambre     = get_field('cta_chambre');
-
 $skyView        = get_field('skyview-parallax','options');
-
 $fLeft          = get_field('fleche-gauche','options');
 $fRight         = get_field('fleche-droite','options');
 
-
 /* Ardennes */
-
 $txtArdennes    = get_field('texte-ardennes');
 $imgArdennes    = get_field('image-ardennes');
 $ctaArdennes    = get_field('cta-ardennes');
 
-
 /* Piscine */
-
 $bgPiscine      = get_field('bg-piscine');
 $txtPiscine     = get_field('txt-piscine');
 $ctaPiscine     = get_field('cta-piscine');
@@ -174,8 +165,8 @@ get_header();?>
     <?php endif;?>
 </section>
 
-<?php get_template_part( 'templates-parts/section-prestations');?>
-<?php get_template_part( 'templates-parts/section-citation' );?>
+<?php get_template_part( $builder .'section-prestations');?>
+<?php get_template_part( $builder .'section-citation' );?>
 <?php get_template_part( 'templates-parts/section-sejours' );?>
 
 <?php get_template_part( 'templates-parts/fullwidth-banner' );?>
@@ -235,7 +226,7 @@ get_header();?>
 </section>
 
 <?php get_template_part( 'templates-parts/section-evenements' );?>
-<?php get_template_part( 'templates-parts/section-chef');?>
+<?php get_template_part( $builder . 'section-chef');?>
 
 <section id="piscine">
   <?php if($bgPiscine):?>

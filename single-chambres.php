@@ -68,12 +68,9 @@ get_template_part( 'templates-parts/section-hero');
 
 <?php 
 
-get_template_part( 'templates-parts/section-citation' );
-
+get_template_part( 'templates-parts/builder/section-citation' );
 get_template_part( 'templates-parts/section-sejours' );
-
 get_template_part( 'templates-parts/section-discoverRooms' );
-
 get_template_part('templates-parts/section-logo');
 get_template_part('templates-parts/section-newsletter');
 get_footer();
