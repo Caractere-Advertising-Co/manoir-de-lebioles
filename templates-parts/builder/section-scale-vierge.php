@@ -33,7 +33,7 @@ $videoScale   = get_sub_field('videoScale');
       <div id="popup-video">
         <span id="hideVideo">x</span>
         <video width="1280" height="720" controls>
-          <source src="<?php echo $ctaScale['url'];?>" type="video/mp4">
+          <source src="<?php echo $ctaScale['url'];?>" type="video/mp4" autoplay>
           Your browser does not support the video tag.
         </video>
       </div>
