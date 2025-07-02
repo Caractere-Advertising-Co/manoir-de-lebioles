@@ -105,6 +105,10 @@ get_header();?>
     </div>
     <div class="cold">
         <?php if($txtChambre): echo $txtChambre; endif;?>
+        <?php if($ctaChambre):?>
+          <a href="<?php echo $ctaChambre['url'];?>" class="cta"><?php echo $ctaChambre['title'];?></a>
+        <?php endif;?>
+      </div>
     </div>
   </div>
 
@@ -151,10 +155,7 @@ get_header();?>
   </div>
 
   <div class="container">
-    <?php if($ctaChambre):?>
-        <a href="<?php echo $ctaChambre['url'];?>" class="cta"><?php echo $ctaChambre['title'];?></a>
-    <?php endif;?>
-    </div>
+  
     <div id="lightbox-container"></div>
   </div>
 </section>
