@@ -38,6 +38,22 @@
         font-style: italic;
       }
     }
+
+    table {
+      width: 100%;
+
+      tbody {
+        tr {
+          td {
+            font-family: $Wix;
+
+            &:last-child {
+              color: $gold-color;
+            }
+          }
+        }
+      }
+    }
   }
 
   .block-cta {
