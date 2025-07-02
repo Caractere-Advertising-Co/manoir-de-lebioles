@@ -8,8 +8,7 @@ $description = get_field('description-chambre');
 $ctaRes      = get_field('cta_reservation'); 
 $ctaOff      = get_field('cta_offrir');
 
-get_header();
-
+get_header();   
 get_template_part( 'templates-parts/section-hero');
 
 ?>
@@ -68,7 +67,9 @@ get_template_part( 'templates-parts/section-hero');
 
 <?php 
 
+//get_template_part( 'templates-parts/section-discoverRooms' );
 get_template_part( 'templates-parts/builder/section-citation' );
+
 get_template_part( 'templates-parts/section-sejours' );
 get_template_part( 'templates-parts/section-discoverRooms' );
 get_template_part('templates-parts/section-logo');
