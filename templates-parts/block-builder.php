@@ -67,6 +67,8 @@
         get_template_part( $builder . 'section-simple' );
       elseif( get_row_layout() == "chef"):
         get_template_part( $builder . 'section-chef' );
+      elseif( get_row_layout() == "scale"):
+        get_template_part( $builder . 'section-scale-vierge' );
       elseif( get_row_layout() == "prestation"):
         get_template_part( $builder . 'section-prestations' );
       elseif( get_row_layout() == "saveurs"):
