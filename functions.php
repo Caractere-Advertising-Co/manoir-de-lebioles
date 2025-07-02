@@ -6,6 +6,7 @@
 require_once get_template_directory() . '/includes/class-cpt-chambres.php';
 require_once get_template_directory() . '/includes/class-cpt-faq.php';
 require_once get_template_directory() . '/includes/class-cpt-jobs.php';
+require_once get_template_directory() . '/includes/class-disable-comment.php';
 
 // Enable Elementor support for pages
 
