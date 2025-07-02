@@ -1,6 +1,6 @@
 <?php 
 
-$builder = 'templates-parts/builder';
+$builder = 'templates-parts/builder/';
 
 $ctaSej         = get_field('cta_citation'); 
 
