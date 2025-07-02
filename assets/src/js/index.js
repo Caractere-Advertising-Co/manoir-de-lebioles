@@ -42,3 +42,4 @@ import "./components/swiper.js";
 import "./components/stickyMenu.js";
 import "./components/scrollTop.js";
 import "./components/accordeons.js";
+import "./components/popupVideo.js";
