@@ -7,7 +7,7 @@ $videoScale   = get_sub_field('videoScale');
 
 ?>
 
-<section id="chef">
+<section id="chef" class="scaleVierge">
   <?php if($bgScale):?>
     <div id="backgroundChef">
       <img src="<?php echo $bgScale['url'];?>" alt="<?php echo $bgScale['title'];?>">
@@ -15,10 +15,12 @@ $videoScale   = get_sub_field('videoScale');
   <?php endif;?>
   <div id="text">
     <div class="text container columns">
-      <div class="colg">
-        <?php if($txtScale): echo $txtScale; endif;?>
+      <?php if($txtScale):?>
+        <div class="colg">
+          <?php echo $txtScale; ?>
       </div>
-      <div class="cold">
+      <?php endif;?>
+      <div class="cold <?php if($videoScale == true): echo 'video'; endif;?>">
         <?php if($ctaScale):?>
           <a class="cta -border" <?php echo $videoScale == true ? 'href="#!" data-video="popup-video" id="triggerVideo"' : 'href="'.$ctaScale['url'].'"';?>>
             <?php echo $ctaScale['title'];?>
