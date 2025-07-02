@@ -23,16 +23,17 @@ $videoScale   = get_sub_field('videoScale');
           <a class="cta -border" <?php echo $videoScale == true ? 'href="#!" data-video="popup-video" id="triggerVideo"' : 'href="'.$ctaScale['url'].'"';?>>
             <?php echo $ctaScale['title'];?>
           </a>
-
-          <?php if($videoScale == true):?>
-            <div id="popup-video">
-              <video width="1280" height="720" controls>
-                <source src="<?php echo $ctaScale['url'];?>" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            <?php endif;?>
         <?php endif;?>
       </div>
     </div>
   </div>
+  <?php if($videoScale == true):?>
+      <div id="popup-video">
+        <span id="hideVideo">x</span>
+        <video width="1280" height="720" controls>
+          <source src="<?php echo $ctaScale['url'];?>" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+  <?php endif;?>
 </section>
