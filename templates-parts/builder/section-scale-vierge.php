@@ -1,8 +1,8 @@
 <?php 
 
-$bgScale       = get_field('bgScale');
-$txtScale         = get_field('txtScale');
-$ctaScale     = get_field('ctaScale');
+$bgScale      = get_sub_field('bgScale');
+$txtScale     = get_sub_field('txtScale');
+$ctaScale     = get_sub_field('ctaScale');
 
 ?>
 
