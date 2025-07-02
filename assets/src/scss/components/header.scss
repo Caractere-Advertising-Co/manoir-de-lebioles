@@ -139,7 +139,8 @@ header {
 
           &.-gold {
             background-color: $gold-color;
-            text-wrap: no-wrap;
+            text-wrap: inherit;
+            min-width: 95px;
 
             &::after {
               content: "";

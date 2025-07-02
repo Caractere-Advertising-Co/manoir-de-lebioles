@@ -6,6 +6,7 @@
 
   .container {
     width: 50vw !important;
+    max-width: calc(1200px - 20vw);
     padding-left: 5vw;
     margin-left: 30vw;
     border-left: 1px solid $gold-color;
@@ -24,6 +25,18 @@
       font-size: 1rem;
       letter-spacing: 10px;
       line-height: 1.5rem;
+    }
+
+    p {
+      margin: 15px 0;
+
+      strong {
+        font-weight: 600;
+      }
+
+      em {
+        font-style: italic;
+      }
     }
   }
 

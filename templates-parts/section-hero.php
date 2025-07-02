@@ -6,6 +6,10 @@ if (is_singular('chambres')):
     $galerie = get_field('galerie-chambre');
 endif;
 
+if (is_singular('jobs')):
+    $galerie = get_field('galerie-jobs');
+endif;
+
 if($galerie):?>
 <div id="hero_container" class="swiper swiper-hero">
     <div class="swiper-wrapper">

@@ -16,7 +16,6 @@ $args = array(
     'form'       => $form
 );
 
-
 get_header();
 get_template_part('templates-parts/section-hero','hero', $args);?>
 

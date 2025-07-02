@@ -5,6 +5,7 @@
 // Load CPT classes
 require_once get_template_directory() . '/includes/class-cpt-chambres.php';
 require_once get_template_directory() . '/includes/class-cpt-faq.php';
+require_once get_template_directory() . '/includes/class-cpt-jobs.php';
 
 // Enable Elementor support for pages
 
