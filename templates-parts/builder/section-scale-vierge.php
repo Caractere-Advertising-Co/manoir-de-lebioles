@@ -3,6 +3,7 @@
 $bgScale      = get_sub_field('bgScale');
 $txtScale     = get_sub_field('txtScale');
 $ctaScale     = get_sub_field('ctaScale');
+$videoScale   = get_sub_field('videoScale');
 
 ?>
 
@@ -19,7 +20,7 @@ $ctaScale     = get_sub_field('ctaScale');
       </div>
       <div class="cold">
         <?php if($ctaScale):?>
-          <a class="cta -border" href="<?php echo $ctaScale['url'];?>">
+          <a class="cta -border" <?php echo $videoScale == true ? 'href="#!"' : 'href="'.$ctaScale['url'].'"';?>>
             <?php echo $ctaScale['title'];?>
           </a>
         <?php endif;?>
