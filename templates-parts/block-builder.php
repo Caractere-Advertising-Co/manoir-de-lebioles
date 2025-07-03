@@ -91,6 +91,8 @@
         get_template_part( $repo . 'section-contact');
       elseif( get_row_layout() == "listing-jobs"):
         get_template_part( $builder . 'section-listing-jobs');
+      elseif( get_row_layout() == "slider-decouverte"):
+        get_template_part( $builder . 'section-discover');
       endif;
     endwhile;
   endif;?>
