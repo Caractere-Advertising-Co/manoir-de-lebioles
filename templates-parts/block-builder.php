@@ -80,7 +80,7 @@
       elseif( get_row_layout() == "new-era"):
         get_template_part( $builder . 'section-new-era' );
       elseif( get_row_layout() == "image-fullscreen"):
-        get_template_part( $builder . 'section-image-fullscreen' );
+        get_template_part( $repo . 'fullwidth-banner' );
       elseif( get_row_layout() == "intro-about"):
         get_template_part( $builder . 'section-intro-about' );
       elseif( get_row_layout() == "section-about-contact"):
