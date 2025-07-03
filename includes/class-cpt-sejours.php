@@ -32,6 +32,6 @@ class CPT_Sejours {
     }
 }
 
-add_action('init', ['CPT_Séjours', 'register']);
+add_action('init', ['CPT_Sejours', 'register']);
 
 ?>
