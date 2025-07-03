@@ -14,7 +14,7 @@ $titleDiscover = get_sub_field('titleDiscover');
 
             <div class="swiper swiper-discover">
                 <div class="swiper-wrapper">
-                    <?php while($type->have_posts()): $type->the_post();
+                    <?php while($type->have_rows()): $type->the_rows();
 
                         $descr   = get_field('description-chambre');
                         $galerie = get_field('galerie-chambre');
