@@ -1,16 +1,7 @@
 <?php 
 
 $type = get_sub_field('select_posttype-grid');
-
-$args = array(
-    'post_type' => 'chambres',
-    'posts_per_page'=> -1,
-    'post_statut' => 'publish'
-);
-
-$query = new WP_Query( $args );
-
-$titleDiscover = get_field('titleDiscover','options');
+$titleDiscover = get_sub_field('titleDiscover');
 
 ?>
 
@@ -19,11 +10,11 @@ $titleDiscover = get_field('titleDiscover','options');
         <?php if($titleDiscover): echo $titleDiscover; endif;?>
     </div>
     <div class="container content">
-        <?php if($query):?>
+        <?php if($type):?>
 
             <div class="swiper swiper-discover">
                 <div class="swiper-wrapper">
-                    <?php while($query->have_posts()): $query->the_post();
+                    <?php while($type->have_posts()): $type->the_post();
 
                         $descr   = get_field('description-chambre');
                         $galerie = get_field('galerie-chambre');
