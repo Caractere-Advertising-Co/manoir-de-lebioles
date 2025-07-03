@@ -12,7 +12,7 @@ class CPT_Sejours {
             'new_item' => __('Nouveau', 'custom_post_type'),
             'edit_item' => __('Modifier', 'custom_post_type'),
             'view_item' => __('Voir', 'custom_post_type'),
-            'all_items' => __('Toutes les séjours', 'custom_post_type'),
+            'all_items' => __('Tous les séjours', 'custom_post_type'),
             'search_items' => __('Recherche', 'custom_post_type'),
             'not_found' => __('Non trouvé', 'custom_post_type'),
         );

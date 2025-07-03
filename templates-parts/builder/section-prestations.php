@@ -1,6 +1,6 @@
 <?php /* Prestation */
 
-if(is_page_template('builder.php')):
+if(is_page_template('builder.php') || is_singular( 'sejours' )):
   $titrePresta    = get_sub_field('titre-presta');
   $txtPresta      = get_sub_field('txt-presta');
   $slider         = get_sub_field('slide-prestation');
