@@ -14,10 +14,10 @@ $titleDiscover = get_sub_field('titleDiscover');
 
             <div class="swiper swiper-discover">
                 <div class="swiper-wrapper">
-                    <?php while($type->have_rows()): $type->the_rows();
+                    <?php foreach($type as $t):
 
-                        $descr   = get_field('description-chambre');
-                        $galerie = get_field('galerie-chambre');
+                        $descr   = $t['description-chambre'];
+                        $galerie = $t['galerie-chambre'];
                         $thmb    = $galerie[0]['url'];
                     ?>
                         <div class="swiper-slide">
@@ -26,7 +26,7 @@ $titleDiscover = get_sub_field('titleDiscover');
                             <?php echo '<p>'. substr($descr,0,170). '...</p>';?>
                             <a href="<?php echo get_the_permalink()?>" class="cta-line">EXPLORER</a>
                         </div>
-                    <?php endwhile;?>
+                    <?php endforeach;?>
                 </div>
             </div>
 
