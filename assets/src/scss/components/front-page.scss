@@ -349,7 +349,8 @@
 #sejours {
   padding: 50px 0 100px;
 
-  .columns {
+  .columns,
+  .grid {
     gap: 30px;
 
     .col {
@@ -366,6 +367,10 @@
         margin: 20px 0;
       }
     }
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
