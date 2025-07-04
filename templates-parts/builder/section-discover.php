@@ -18,7 +18,7 @@ $titleDiscover = get_sub_field('titleDiscover');
                         // Setup this post for WP functions (variable must be named $post).
                         setup_postdata($post);
 
-                        if($post->post_type == 'page'):
+                        if($post->post_type == 'page' || $post->post_type == 'sejours'):
                             $galerie = get_field('galerie-hero');
 
                             if(empty($galerie)):
