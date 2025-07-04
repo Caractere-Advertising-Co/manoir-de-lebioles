@@ -15,7 +15,7 @@ $query = new WP_Query($args);
             $i = 0;
             while ($query->have_posts()): $query->the_post(); // fixed: was the_posts()
                 $galerie = get_field('galerie-hero');
-                $bg = $galerie[0]['hero'][0] ?? null; // added null coalescing in case it's empty
+                $bg = $galerie['hero']['url'] ?? null; // added null coalescing in case it's empty
 
                 $titre = get_the_title();
                 $lien  = get_permalink();
