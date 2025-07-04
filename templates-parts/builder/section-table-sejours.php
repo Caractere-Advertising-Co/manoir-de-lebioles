@@ -30,6 +30,8 @@ $query = new WP_Query($args);
                 <a href="<?php echo $lien;?>" class="cta-line">En savoir plus</a>
             </div>
             <?php $i++; endwhile;
+
+            wp_reset_postdata(  );
         endif;?>
     </div>
 </section>
