@@ -17,7 +17,7 @@ $query = new WP_Query($args);
             $i = 0;
             while($query->have_posts()): $query->the_posts();
                 $galerie = get_field('galerie-hero');
-                $bg      = $galerie['hero'][0];
+                $bg      = $galerie[0]['hero'][0];
 
                 $titre = get_the_title();
                 $lien = get_permalink( );?>
