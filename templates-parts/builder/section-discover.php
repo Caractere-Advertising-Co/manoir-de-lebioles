@@ -26,7 +26,7 @@ $titleDiscover = get_sub_field('titleDiscover');
                             endif;
                                 $thmb    = $galerie[0]['hero']['url'];
                         elseif($post->post_type == 'chambres'):
-                            $galerie = get_sub_field('galerie-chambre');
+                            $galerie = get_field('galerie-chambre');
                             $thmb    = $galerie[0]['url'];
                         endif;
 
