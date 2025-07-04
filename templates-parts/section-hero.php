@@ -4,10 +4,10 @@ $galerie = get_field('galerie-hero');
 
 if (is_singular('chambres')):
     $galerie = get_field('galerie-chambre');
-endif;
-
-if (is_singular('jobs')):
+elseif (is_singular('jobs')):
     $galerie = get_field('galerie-jobs');
+elseif(is_singular( 'sejours' )):
+    $galerie = get_field('galerie-hero');
 endif;
 
 if($galerie):?>
