@@ -497,17 +497,11 @@
           }
         }
 
-        tr + tr {
-          td {
-            padding: 20px 0 10px;
-            border-top: 1px solid $light-gray;
-          }
-        }
-
+        tr + tr,
         thead {
+          td,
           th {
-            padding-top: 20px;
-            padding-bottom: 10px;
+            padding: 20px 0;
             border-top: 1px solid $light-gray;
           }
         }
