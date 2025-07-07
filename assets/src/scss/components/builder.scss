@@ -440,6 +440,20 @@
       position: sticky;
       top: 150px;
 
+      h2 {
+        color: $primary-color;
+        letter-spacing: 0;
+        margin-bottom: 30px;
+
+        strong {
+          font-weight: 600;
+        }
+
+        em {
+          font-style: italic;
+        }
+      }
+
       .big-img {
         height: 250px;
       }

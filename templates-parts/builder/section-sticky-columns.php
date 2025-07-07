@@ -9,6 +9,8 @@ $descr   = get_sub_field('texte-sticky');
 <section id="sticky-columns">
     <div class="container columns">
         <div class="colg sticky">
+
+            <?php if($title): echo $title; endif;?>
             <?php if($galerie):
             $i = 0;?>
 
@@ -28,7 +30,6 @@ $descr   = get_sub_field('texte-sticky');
             <?php endif;?>                    
         </div>
         <div class="cold">
-            <?php if($title): echo $title; endif;?>
             <?php if($descr): echo $descr; endif;?>
         </div>
     </div>
