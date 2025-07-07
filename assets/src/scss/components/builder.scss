@@ -454,11 +454,6 @@
         }
       }
 
-      td {
-        font-family: $Wix;
-        margin-bottom: 10px;
-      }
-
       .big-img {
         height: 250px;
       }
@@ -477,6 +472,17 @@
     .cold,
     .colg {
       width: 50%;
+
+      h3 {
+        font-size: 1.3rem;
+        margin: 20px auto 10px;
+        font-weight: 600;
+      }
+
+      td {
+        font-family: $Wix;
+        margin-bottom: 10px;
+      }
     }
   }
 }
