@@ -482,6 +482,15 @@
       td {
         font-family: $Wix;
         margin-bottom: 10px;
+        vertical-align: top;
+
+        &:nth-child(2) {
+          color: $gold-color;
+
+          p {
+            color: $gold-color;
+          }
+        }
       }
     }
   }
