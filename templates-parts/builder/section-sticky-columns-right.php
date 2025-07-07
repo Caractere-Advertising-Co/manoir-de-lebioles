@@ -6,7 +6,7 @@ $descr   = get_sub_field('texte-sticky');
 
 ?>
 
-<section id="sticky-columns">
+<section id="sticky-columns-right">
     <div class="container columns">
         <div class="colg">
             <?php if($title): echo $title; endif;?>
