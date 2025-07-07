@@ -426,3 +426,37 @@
     }
   }
 }
+
+#sticky-columns {
+  min-height: 100vh;
+  margin: 50px auto;
+
+  .container {
+    position: relative;
+    align-items: flex-start; /* important */
+
+    .sticky {
+      position: sticky;
+      width: 50%;
+      top: 150px;
+
+      .big-img {
+        height: 250px;
+      }
+
+      .grid-img {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+
+        .block-img {
+          width: 50%;
+        }
+      }
+    }
+
+    .cold {
+      width: 50%;
+    }
+  }
+}

@@ -87,6 +87,10 @@
         get_template_part( $builder . 'section-contact-about');
       elseif( get_row_layout() == "banner-fullwidth"):
         get_template_part( $repo . 'fullwidth-banner');
+      elseif( get_row_layout() == "sticky-columns"):
+        get_template_part( $builder . 'section-sticky-columns');
+      elseif( get_row_layout() == "sticky-columns-right"):
+        get_template_part( $builder . 'section-sticky-columns');
       elseif( get_row_layout() == "banner-form-contact"):
         get_template_part( $repo . 'section-contact');
       elseif( get_row_layout() == "listing-jobs"):
