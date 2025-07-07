@@ -476,17 +476,23 @@
 
       table {
         margin-bottom: 20px;
+        width: 100%;
+
         td,
         th {
           font-family: $Wix;
           margin-bottom: 10px;
           vertical-align: top;
+          color: $dark-gray;
 
           &:nth-child(2) {
             color: $gold-color;
+            min-width: 50px;
+            text-align: right;
 
             p {
               color: $gold-color;
+              text-align: right;
             }
           }
         }
