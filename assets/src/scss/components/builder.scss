@@ -479,7 +479,8 @@
         font-weight: 600;
       }
 
-      td {
+      td,
+      th {
         font-family: $Wix;
         margin-bottom: 10px;
         vertical-align: top;
@@ -490,6 +491,12 @@
           p {
             color: $gold-color;
           }
+        }
+      }
+
+      thead {
+        th {
+          padding-bottom: 10px;
         }
       }
     }
