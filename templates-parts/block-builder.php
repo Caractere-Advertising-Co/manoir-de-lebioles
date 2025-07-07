@@ -36,7 +36,7 @@
                 $actif = get_sub_field('actif_information'); 
                 
                 $actif == true ? $isActif = 'active' : $isActif = '';
-                $actif == true ? $maxH = 'style="max-height:auto;"' : $maxH = '';
+                $actif == true ? $maxH = 'style="max-height: fit-content;"' : $maxH = '';
 
                 echo '<div class="toggle-btn accordion '.$isActif.'"><h3>'.$titre.'</h3></div>';
                 echo '<div class="toggle-content panel" '.$maxH.'><p>'.$descr.'</p></div>';
