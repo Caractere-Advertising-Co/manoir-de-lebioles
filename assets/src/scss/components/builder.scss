@@ -438,7 +438,6 @@
 
     .sticky {
       position: sticky;
-      width: 50%;
       top: 150px;
 
       .big-img {
@@ -456,7 +455,8 @@
       }
     }
 
-    .cold {
+    .cold,
+    .colg {
       width: 50%;
     }
   }
