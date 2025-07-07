@@ -425,7 +425,7 @@
 
 #sticky-columns,
 #sticky-columns-right {
-  min-height: 80vh;
+  min-height: 70vh;
   margin: 50px auto;
 
   .container {
@@ -483,7 +483,6 @@
           font-family: $Wix;
           margin-bottom: 10px;
           vertical-align: top;
-          color: $dark-gray;
 
           &:nth-child(2) {
             color: $gold-color;
