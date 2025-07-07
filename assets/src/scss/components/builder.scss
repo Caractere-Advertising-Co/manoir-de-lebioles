@@ -478,25 +478,29 @@
         font-weight: 600;
       }
 
-      td,
-      th {
-        font-family: $Wix;
-        margin-bottom: 10px;
-        vertical-align: top;
+      table {
+        margin-bottom: 20px;
+        td,
+        th {
+          font-family: $Wix;
+          margin-bottom: 10px;
+          vertical-align: top;
 
-        &:nth-child(2) {
-          color: $gold-color;
-
-          p {
+          &:nth-child(2) {
             color: $gold-color;
+
+            p {
+              color: $gold-color;
+            }
           }
         }
-      }
 
-      thead {
-        th {
-          padding-top: 20px;
-          padding-bottom: 10px;
+        thead {
+          th {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            border-top: 1px solid $light-gray;
+          }
         }
       }
     }
