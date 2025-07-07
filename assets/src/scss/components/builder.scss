@@ -497,6 +497,13 @@
           }
         }
 
+        tr + tr {
+          td {
+            padding: 20px 0 10px;
+            border-top: 1px solid $light-gray;
+          }
+        }
+
         thead {
           th {
             padding-top: 20px;
