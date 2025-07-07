@@ -33,9 +33,13 @@
               while(have_rows('informations')): the_row('informations');
                 $titre = get_sub_field('titre_information');
                 $descr = get_sub_field('description_information');
+                $actif = get_sub_field('actif_information'); 
+                
+                $actif == true ? $isActif = 'active' : '';
+                $actif == true ? $maxH = 'style="max-height:auto;"' : '';
 
-                echo '<div class="toggle-btn accordion"><h3>'.$titre.'</h3></div>';
-                echo '<div class="toggle-content panel"><p>'.$descr.'</p></div>';
+                echo '<div class="toggle-btn accordion '.$isActif.'"><h3>'.$titre.'</h3></div>';
+                echo '<div class="toggle-content panel" '.$maxH.'><p>'.$descr.'</p></div>';
               endwhile;
             endif;?>
           </div>
