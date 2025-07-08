@@ -7,35 +7,36 @@ $videoScale   = get_sub_field('videoScale');
 
 ?>
 
-<section id="chef" class="scaleVierge">
+<section class="scaleVierge scale-section">
   <?php if($bgScale):?>
-    <div id="backgroundChef">
+    <div class="backgroundScale">
       <img src="<?php echo $bgScale['url'];?>" alt="<?php echo $bgScale['title'];?>">
     </div>
   <?php endif;?>
-  <div id="text">
+  <div class="textScale">
     <div class="text container columns">
       <?php if($txtScale):?>
         <div class="colg">
           <?php echo $txtScale; ?>
-      </div>
+        </div>
       <?php endif;?>
       <div class="cold <?php if($videoScale == true): echo 'video'; endif;?>">
         <?php if($ctaScale):?>
-          <a class="cta -border" <?php echo $videoScale == true ? 'href="#!" data-video="popup-video" id="triggerVideo"' : 'href="'.$ctaScale['url'].'"';?>>
+          <a class="cta -border" <?php echo $videoScale == true ? 'href="#!" data-video="popup-video" class="triggerVideo"' : 'href="'.$ctaScale['url'].'"';?>>
             <?php echo $ctaScale['title'];?>
           </a>
         <?php endif;?>
       </div>
     </div>
   </div>
+
   <?php if($videoScale == true):?>
-      <div id="popup-video">
-        <span id="hideVideo">x</span>
-        <video width="1280" height="720" controls>
-          <source src="<?php echo $ctaScale['url'];?>" type="video/mp4" autoplay>
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <div class="popup-video">
+      <span class="hideVideo">x</span>
+      <video width="1280" height="720" controls>
+        <source src="<?php echo $ctaScale['url'];?>" type="video/mp4" autoplay>
+        Your browser does not support the video tag.
+      </video>
+    </div>
   <?php endif;?>
 </section>

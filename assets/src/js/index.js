@@ -37,6 +37,15 @@ if (imgfullScreen) {
   scrollChefZoom(imgfullScreen, bgFullScreen, txtFullScreen);
 }
 
+document.querySelectorAll(".scale-section").forEach((section) => {
+  const bg = section.querySelector(".backgroundScale img");
+  const text = section.querySelector(".textScale");
+
+  if (bg && text) {
+    scrollChefZoom(section, bg, text);
+  }
+});
+
 import "./components/animate.js";
 import "./components/swiper.js";
 import "./components/stickyMenu.js";

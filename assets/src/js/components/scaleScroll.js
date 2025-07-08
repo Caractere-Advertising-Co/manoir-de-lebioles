@@ -4,9 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export function scrollChefZoom(section, img, text) {
-  const tl = gsap.timeline({
-    ease: "none",
-  });
+  const tl = gsap.timeline({ ease: "none" });
 
   tl.from(img, {
     scale: 0.6,
@@ -18,11 +16,10 @@ export function scrollChefZoom(section, img, text) {
     trigger: section,
     start: "top top",
     end: "bottom center",
-    pin: true,
+    //pin: true,
     animation: tl,
-    //markers: true,
     scrub: 0.78,
-    pinSpacing: false,
+    //pinSpacing: false,
     onUpdate: (self) => {
       if (self.progress > 0.2) {
         text?.classList.add("show");
