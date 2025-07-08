@@ -101,7 +101,7 @@
         get_template_part( $builder . 'section-listing-jobs');
       elseif( get_row_layout() == "slider-decouverte"):
         get_template_part( $builder . 'section-discover');
-      elseif( get_row_layout() == "section-decouverte"):
+      elseif( get_row_layout() == "section-decouvertes"):
         get_template_part( $builder . 'section-decouvertes');
       elseif( get_row_layout() == "grille-sejour"):
         get_template_part( $builder . 'section-table-sejours');
