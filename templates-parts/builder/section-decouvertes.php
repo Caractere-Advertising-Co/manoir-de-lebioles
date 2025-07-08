@@ -7,7 +7,7 @@ $ctaArdennes    = get_sub_field('cta-decouvertes');
 ?>
 
 
-<section id="section-discover">
+<section id="section-discover-columns">
   <div class="container columns content">
       <div class="colg">
         <?php if($txtArdennes): echo $txtArdennes; endif;?>
