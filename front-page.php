@@ -236,7 +236,7 @@ get_header();?>
     </div>
   <?php endif;?>
   <div id="textPiscine">
-    <div class="text">
+    <div class="text container columns">
       <div class="colg">
         <?php if($txtPiscine): echo $txtPiscine; endif;?>
       </div>
