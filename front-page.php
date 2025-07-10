@@ -237,7 +237,16 @@ get_header();?>
   <?php endif;?>
   <div id="textPiscine">
     <div class="text">
-      <?php if($txtPiscine): echo $txtPiscine; endif;?>
+      <div class="colg">
+        <?php if($txtPiscine): echo $txtPiscine; endif;?>
+      </div>
+      <div class="cold">
+        <?php if($ctaPiscine):?>
+          <a class="cta -border" href="<?php echo $ctaPiscine['url'];?>">
+            <?php echo $ctaPiscine['title'];?>
+          </a>
+        <?php endif;?>
+      </div>
     </div>
   </div>
 </section>
