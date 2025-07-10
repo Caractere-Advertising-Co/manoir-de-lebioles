@@ -32,6 +32,7 @@
 
   &:hover {
     background: transparent !important;
+    filter: invert(1);
     border-bottom: 1px solid $light !important;
   }
 }
@@ -91,7 +92,6 @@
   letter-spacing: 3px;
   font-weight: 200;
   font-size: 0.9rem;
-  transform: translateY(0);
   width: fit-content;
   display: flex;
   align-items: center;
@@ -102,7 +102,6 @@
   transition: transform ease-in-out 300ms;
 
   &:hover {
-    transform: translateY(-10px);
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
   }
 }
