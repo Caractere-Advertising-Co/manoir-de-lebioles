@@ -2,11 +2,12 @@
 
 .cta {
   padding: 10px 40px;
-  background-color: $primary-color;
+  background: $primary-color;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 0.9rem;
   color: $light;
+  border-bottom: 1px solid;
   letter-spacing: 2px;
   display: flex;
   align-items: center;
@@ -15,43 +16,23 @@
   width: fit-content;
   position: relative;
   z-index: 0;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: $light;
-    z-index: -1;
-    transform-origin: left center;
-    transform: scaleX(0);
-    transition: all ease-in-out 300ms;
-  }
-
-  &:hover {
-    color: $primary-color;
-
-    &:after {
-      transform: scaleX(1);
-    }
-  }
+  transition: all 300ms ease-in-out;
 
   &.-gold {
-    background-color: $gold-color;
+    background: $gold-color;
+    border-bottom: 1px solid $gold-color;
     color: $light;
-
-    &:after {
-      background-color: $dark;
-    }
   }
 
   &.-border {
     border: 1px solid $light;
     background: none;
     overflow: hidden;
+  }
+
+  &:hover {
+    background: transparent !important;
+    border-bottom: 1px solid $light !important;
   }
 }
 

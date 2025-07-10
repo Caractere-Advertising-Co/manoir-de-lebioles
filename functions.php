@@ -59,27 +59,6 @@ add_action('admin_head', function() {
     echo '<style>.attachment-266x266, .thumbnail img { width: 100% !important; height: auto !important; }</style>';
 });
 
-// ======== API: Galerie Chambre ========
-
-add_action('rest_api_init', function() {
-    register_rest_route('manoir/v1', '/galerie/(?P<id>\d+)', [
-        'methods' => 'GET',
-        'callback' => function($data) {
-            $post_id = $data['id'];
-            $gallery = get_field('galerie-chambre', $post_id);
-            if (!$gallery) return [];
-            return array_map(function($img) {
-                return [
-                    'url' => $img['url'],
-                    'alt' => $img['alt'],
-                    'title' => $img['title']
-                ];
-            }, $gallery);
-        },
-        'permission_callback' => '__return_true',
-    ]);
-});
-
 // ======== AJAX: Brevo Form ========
 
 add_action('wp_ajax_nopriv_bdp_brevo_add_contact', 'bdp_brevo_add_contact');

@@ -130,8 +130,11 @@ get_header();?>
             if ($gallery):
               $thumb = $gallery[0]['sizes']['large'];
               ?>
-              <div class="swiper-slide" data-id="<?= get_the_ID(); ?>">
-                <img src="<?= esc_url($thumb); ?>" alt="<?= esc_attr(get_the_title()); ?>">
+              <div class="swiper-slide">
+                <a href="<?php echo get_permalink(get_the_ID());?>" class="block-img">
+                  <img src="<?= esc_url($thumb); ?>" alt="<?= esc_attr(get_the_title()); ?>">
+                </a>
+                <div class="titleRoom"><?php echo get_the_title();?></div>
               </div>
               <?php
             endif;
@@ -152,11 +155,6 @@ get_header();?>
           <img src="<?php echo $fRight['url'];?>" alt="<?php echo $fRight['title'];?>" />
       </div>
     <?php endif;?>
-  </div>
-
-  <div class="container">
-  
-    <div id="lightbox-container"></div>
   </div>
 </section>
 

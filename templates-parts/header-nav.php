@@ -30,7 +30,7 @@ $blockCTA   = get_field('groupe_cta_header','options');
             foreach($blockCTA as $cta):
                 $link = $cta['url'];
 
-                $i == 0 ? $class = 'cta' : $class = 'cta -gold';
+                $i == 0 ? $class = 'cta -no-border' : $class = 'cta -gold';
 
                 if($link): 
                   echo '<a href="'.$link['url'].'" class="'.$class.'">'.$link['title'].'</a>';

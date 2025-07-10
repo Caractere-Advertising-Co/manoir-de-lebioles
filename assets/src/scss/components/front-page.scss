@@ -192,7 +192,7 @@
       width: 50%;
     }
 
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .container {
@@ -223,19 +223,58 @@
     .swiper-wrapper {
       .swiper-slide {
         height: 550px;
+        overflow: hidden;
+        position: relative;
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          transform: scale(1);
+          filter: blur(0px);
+          transition: all ease-in-out 500ms;
+        }
+
+        .titleRoom {
+          position: absolute;
+          z-index: 5;
+          pointer-events: none;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          font-family: $Ivy;
+          color: $light;
+          font-size: 1.2rem;
+          opacity: 0;
+          letter-spacing: 1px;
+          transform: translateY(20px);
+          transition: all ease-in-out 500ms;
+        }
+
+        &:hover {
+          .block-img {
+            img {
+              transform: scale(1.2);
+              filter: blur(10px);
+            }
+          }
+
+          .titleRoom {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       }
     }
 
     .cta {
       display: flex;
-      width: 200px;
-      margin: 80px auto 0;
+      width: fit-content;
+      margin: 40px 0 0;
       text-align: center;
       justify-content: center;
       align-items: center;
@@ -245,7 +284,7 @@
 
 #parallax-sky {
   position: relative;
-  height: 500px;
+  height: 400px;
   overflow: hidden;
 
   .parallax-bg {
