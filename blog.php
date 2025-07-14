@@ -1,6 +1,6 @@
 <?php 
 
-/* Template-name: Page Blog */
+/* Template Name: Page Blog */
 
 $args = array(
     'post_type' => 'post',
