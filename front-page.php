@@ -167,7 +167,6 @@ get_header();?>
 <?php get_template_part( $builder .'section-prestations');?>
 <?php get_template_part( $builder .'section-citation' );?>
 <?php get_template_part( 'templates-parts/section-sejours' );?>
-
 <?php get_template_part( 'templates-parts/fullwidth-banner' );?>
 
 <section id="ardennes">

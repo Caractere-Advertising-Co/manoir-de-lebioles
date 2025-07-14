@@ -6,7 +6,7 @@ $descSejour  = get_field('desc_sejour','options');
 ?>
 
 <section id="sejours">
-    <?php if(!is_front_page(  )):?>
+    <?php if(!is_front_page(  )):?> 
         <div class="container columns">
             <div class="colg"><?php if($TitreSejour): echo $TitreSejour; endif;?></div>
             <div class="cold"><?php if($descSejour): echo $descSejour; endif;?></div>
@@ -23,11 +23,12 @@ $descSejour  = get_field('desc_sejour','options');
             $lien = get_sub_field('lien');?>
             
             <div class="col from-bottom <?php echo $i != 0 ? '-slow' : '';?>">
-                <div class="block-img">
-                    <img src="<?php echo $bg['url'];?>" alt="<?php echo $bg['title'];?>"/>
-                </div>
+                <a href="<?php echo $lien['url'];?>">
+                    <div class="block-img">
+                        <img src="<?php echo $bg['url'];?>" alt="<?php echo $bg['title'];?>"/>
+                    </div>
                 <h4><?php echo $titre;?></h4>
-                <a href="<?php echo $lien['url'];?>" class="cta-line"><?php echo $lien['title'];?></a>
+                <span  class="cta-line"><?php echo $lien['title'];?></span></a>
             </div>
             <?php $i++; endwhile;
         endif;?>

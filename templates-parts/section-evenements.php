@@ -3,6 +3,7 @@
 $txtEvents = get_field('titre-evenements','options');
 $galEvents = get_field('galerie-evenement','options');
 $ctaEvents = get_field('cta-evenement','options');
+$tinyImg   = get_field('tiny-img-evenement','options');
 
 ?>
 
@@ -20,7 +21,11 @@ $ctaEvents = get_field('cta-evenement','options');
             </div>
             <div class="swiper-button-prev btnPrevEvents"></div>
             <div class="swiper-button-next btnNextEvents"></div>
-            <div class="blockDark from-bottom"></div>
+            <?php if($tinyImg):?>
+                <div class="blockDark from-bottom block-img">
+                    <img src="<?php echo $tinyImg['url'];?>" alt="<?php echo $tinyImg['title'];?>" />
+                </div>
+            <?php endif;?>
         </div>
         <div class="cold from-right">
             <?php if($txtEvents): echo $txtEvents; endif;?>
