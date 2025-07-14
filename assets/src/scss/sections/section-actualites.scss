@@ -1,6 +1,7 @@
 @use "../abstracts/_setup.scss" as *;
 
-#section-actualites {
+#section-actualites,
+#grid-blog {
   padding: 100px 0 0;
 
   .intro {
