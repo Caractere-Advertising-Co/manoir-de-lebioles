@@ -6,10 +6,8 @@ $cta_contact = get_field('cta_contact');
 get_header();
 
 get_template_part('templates-parts/section-hero');
-?>
+get_template_part( 'templates-parts/block-builder' );
+get_template_part('templates-parts/section-logo');
+get_template_part('templates-parts/section-newsletter');
 
-<?php get_template_part( 'templates-parts/block-builder' );?>
-
-<?php get_template_part('templates-parts/section-logo');?>
-<?php get_template_part('templates-parts/section-newsletter');?>
-<?php get_footer(); ?>
+get_footer();?>
