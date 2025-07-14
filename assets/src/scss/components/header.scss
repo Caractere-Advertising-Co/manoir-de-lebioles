@@ -117,8 +117,16 @@ header {
         }
       }
 
-      .block-img {
-        max-width: 250px;
+      .logo-sticky {
+        display: none;
+      }
+
+      .logo-full {
+        display: flex;
+
+        .block-img {
+          max-width: 250px;
+        }
       }
 
       .cold {
@@ -186,6 +194,14 @@ header {
             stroke: $dark;
           }
         }
+      }
+
+      .logo-sticky {
+        display: block;
+      }
+
+      .logo-full {
+        display: none;
       }
     }
   }

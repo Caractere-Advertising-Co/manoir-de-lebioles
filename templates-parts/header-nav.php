@@ -1,6 +1,7 @@
 <?php 
 
 $logo       = get_field('logo-entreprise','options');
+$logoSticky = get_field('logo-negatif','options');
 $blockCTA   = get_field('groupe_cta_header','options');
 
 ?>
@@ -18,9 +19,17 @@ $blockCTA   = get_field('groupe_cta_header','options');
       </a>
 
         <?php if($logo):?>
-            <a href="<?php echo get_bloginfo('url');?>">
+            <a href="<?php echo get_bloginfo('url');?>" class="logo-full">
               <div class="block-img">
                 <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
+              </div>
+            </a>
+        <?php endif;?>
+
+        <?php if($logoSticky):?>
+            <a href="<?php echo get_bloginfo('url');?>" class="logo-sticky">
+              <div class="block-img">
+                <img src="<?php echo $logoSticky['url'];?>" alt="<?php echo $logoS['title'];?>" />
               </div>
             </a>
         <?php endif;?>
