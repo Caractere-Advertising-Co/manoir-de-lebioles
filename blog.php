@@ -9,6 +9,7 @@ $args = array(
 
 $query = new WP_Query($args);
 
+get_header();
 ?>
 
 <?php get_template_part( 'templates-parts/block-builder' );?>
@@ -41,4 +42,6 @@ $query = new WP_Query($args);
         wp_reset_postdata(  );?>
     </div>
 </section>
+
+<?php get_footer();?>
 
