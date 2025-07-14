@@ -126,6 +126,10 @@ header {
 
         .block-img {
           max-width: 250px;
+
+          img {
+            object-fit: contain;
+          }
         }
       }
 
