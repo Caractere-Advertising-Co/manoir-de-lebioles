@@ -18,26 +18,27 @@ get_template_part( 'templates-parts/block-builder' );
 
 <section id="prev-next-post">
   <div class="container columns">
-    <?php if ( ! empty( $prev_post ) ): ?>
-      <div class="colg from-bottom">
+    <div class="colg from-bottom">
+      <?php if ( ! empty( $prev_post ) ): ?>
         <a href="<?php echo get_permalink( $prev_post->ID ); ?>">
           <div class="block-img">
             <img src="<?php echo the_post_thumbnail_url(  );?>" alt="<?php echo the_post_thumbnail_caption( );?>" />
           </div>
           <h4><?php echo apply_filters( 'the_title', $prev_post->post_title ); ?></h4>
         </a>
-      </div>
-    <?php endif;?>
-    <?php if ( ! empty( $next_post ) ): ?>
-      <div class="colg from-bottom">
+      <?php endif;?>
+    </div>
+    
+    <div class="cold from-bottom -slow">
+      <?php if ( ! empty( $next_post ) ): ?>
         <a href="<?php echo get_permalink( $next_post->ID ); ?>">
           <div class="block-img">
              <img src="<?php echo the_post_thumbnail_url(  );?>" alt="<?php echo the_post_thumbnail_caption( );?>" />
           </div>
           <h4><?php echo apply_filters( 'the_title', $next_post->post_title ); ?></h4>
         </a>
-      </div>
-    <?php endif;?>
+      <?php endif;?>
+    </div>
   </div>
 </section>
 
