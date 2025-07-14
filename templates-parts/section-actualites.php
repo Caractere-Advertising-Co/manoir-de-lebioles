@@ -22,7 +22,7 @@
         <?php if($txtActus): echo $txtActus; endif;?>
     </div>
   </div>
-  <div class="container columns grid-actus content">
+  <div class="container columns grid-actus">
     <?php if($query):
         while($query->have_posts()): $query->the_post();?>
             <div class="card-actus">

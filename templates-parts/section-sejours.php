@@ -13,7 +13,7 @@ $descSejour  = get_field('desc_sejour','options');
         </div>
     <?php endif;?>
 
-    <div class="container columns block-sejour">
+    <div class="container grid block-sejour">
         <?php if(have_rows('sejours','options')):
             $i = 0;
             while(have_rows('sejours','options')): the_row('sejours','options');
