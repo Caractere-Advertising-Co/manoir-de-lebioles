@@ -30,7 +30,7 @@ $tinyImg   = get_field('tiny-img-evenement','options');
         <div class="cold from-right">
             <?php if($txtEvents): echo $txtEvents; endif;?>
             <?php if($ctaEvents):?>
-                <a href="<?php echo $cta['url'];?>" class="cta from-right -slow"><?php echo $ctaEvents['title'];?></a>
+                <a href="<?php echo $ctaEvents['url'];?>" class="cta from-right -slow"><?php echo $ctaEvents['title'];?></a>
             <?php endif;?>
         </div>
     </div>
