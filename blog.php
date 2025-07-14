@@ -10,9 +10,9 @@ $args = array(
 $query = new WP_Query($args);
 
 get_header();
-?>
 
-<?php get_template_part( 'templates-parts/block-builder' );?>
+get_template_part('templates-parts/section-hero');
+get_template_part( 'templates-parts/block-builder' );?>
 
 <section id="grid-blog">
     <div class="container columns grid-actus">
