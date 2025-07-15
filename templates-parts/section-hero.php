@@ -13,7 +13,7 @@ endif;
 $tiny = array(2572,2793,2560);
 
 if($galerie):?>
-<div id="hero_container" class="swiper swiper-hero <?php if(is_single() || in_array($tiny, get_current_blog_id(  ))): echo 'tiny' ;endif;?>">
+<div id="hero_container" class="swiper swiper-hero <?php if(is_single() || in_array(get_current_blog_id(  ),$tiny)): echo 'tiny' ;endif;?>">
     <div class="swiper-wrapper">
         <?php if($galerie): foreach($galerie as $g):
 
