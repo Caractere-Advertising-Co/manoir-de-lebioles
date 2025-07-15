@@ -17,6 +17,7 @@ window.addEventListener("load", () => {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
+    autoplay: true,
     navigation: {
       nextEl: ".chambre-button-next",
       prevEl: ".chambre-button-prev",

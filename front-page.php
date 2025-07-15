@@ -126,6 +126,7 @@ get_header();?>
         if ($chambres->have_posts()):
           while ($chambres->have_posts()): $chambres->the_post();
             $gallery = get_field('galerie-chambre');
+            $number  = get_field('nombre');
 
             if ($gallery):
               $thumb = $gallery[0]['sizes']['large'];
@@ -134,7 +135,7 @@ get_header();?>
                 <a href="<?php echo get_permalink(get_the_ID());?>" class="block-img">
                   <img src="<?= esc_url($thumb); ?>" alt="<?= esc_attr(get_the_title()); ?>">
                 </a>
-                <div class="titleRoom"><?php echo get_the_title();?></div>
+                <div class="titleRoom"><?php echo $number . '<br>' . get_the_title();?></div>
               </div>
               <?php
             endif;
