@@ -98,3 +98,32 @@ function bdp_brevo_add_contact() {
         wp_send_json_error('Erreur Brevo: ' . wp_remote_retrieve_body($response), $status);
     }
 }
+add_shortcode('cta_pdf_list', function () {
+    if (!function_exists('have_rows')) {
+        return '<!-- ACF not active -->';
+    }
+
+    if (!have_rows('cta_pdf_repeater')) {
+        return '<!-- No CTA found -->';
+    }
+
+    ob_start();
+    echo '<div class="cta-pdf-list">';
+
+    while (have_rows('cta_pdf_repeater')) {
+        the_row();
+        $text = get_sub_field('cta_text');
+        $file = get_sub_field('cta_file');
+
+        if (!$file) continue;
+
+        echo '<div class="cta-pdf">';
+        echo '<a class="cta-link" href="' . esc_url($file) . '" target="_blank" rel="noopener noreferrer">';
+        echo esc_html($text ? $text : 'Télécharger le PDF');
+        echo '</a>';
+        echo '</div>';
+    }
+
+    echo '</div>';
+    return ob_get_clean();
+});
