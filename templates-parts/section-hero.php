@@ -15,7 +15,7 @@ $tiny = array(2572,2793,2560);
 if($galerie):
 
 $classes = 'swiper swiper-hero';
-if (is_single() || in_array(get_current_blog_id(), $tiny)) {
+if (is_single() || in_array(get_the_ID(), $tiny)) {
     $classes .= ' tiny';
 }
 
