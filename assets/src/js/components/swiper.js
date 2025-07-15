@@ -1,7 +1,7 @@
 // index.js
 
 import Swiper from "swiper";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
 import "swiper/css"; // utile si tu utilises les styles par défaut
 import "swiper/css/navigation"; // styles pour les flèches, optionnel
@@ -45,10 +45,10 @@ window.addEventListener("load", () => {
   });
 
   const swiperArdennes = new Swiper(".swiper-img-ardenne", {
-    modules: [Autoplay],
+    modules: [Autoplay, EffectFade],
     slidesPerView: 1,
     spaceBetween: 0,
-    crossFade: true,
+    effect: "fade",
     autoplay: {
       delay: 5000, // 5000 ms = 5 secondes par slide
       disableOnInteraction: false, // pour que l'autoplay continue après un swipe manuel
