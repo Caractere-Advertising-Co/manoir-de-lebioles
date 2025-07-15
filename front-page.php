@@ -183,12 +183,15 @@ get_header();?>
       <div class="cold">
         <?php if($imgArdennes):?>
           <div class="swiper swiper-img-ardenne">
-          <?php foreach($imgArdennes as $img):?>
-            <div class="block-img from-bottom">
-              <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>"/>
+            <div class="swiper-wrapper">
+              <?php foreach($imgArdennes as $img):?>
+                <div class="swiper-slide block-img from-bottom">
+                  <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>"/>
+                </div>
+              <?php endforeach;?>
             </div>
-          <?php endforeach;
-        endif;?>
+          </div>
+        <?php endif;?>
       </div>
     </div>
 </section>
