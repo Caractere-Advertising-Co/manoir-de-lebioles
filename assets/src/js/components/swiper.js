@@ -12,7 +12,7 @@ import "fslightbox";
 window.addEventListener("load", () => {
   // Swiper init
   const swiper = new Swiper(".swiper-chambre", {
-    modules: [Navigation],
+    modules: [Navigation, Autoplay],
 
     slidesPerView: 3,
     spaceBetween: 30,
