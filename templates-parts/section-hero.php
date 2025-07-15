@@ -11,7 +11,7 @@ elseif(is_singular( 'sejours' )):
 endif;
 
 if($galerie):?>
-<div id="hero_container" class="swiper swiper-hero <?php if(is_singular()): echo 'tiny' ;endif;?>">
+<div id="hero_container" class="swiper swiper-hero <?php if(is_single()): echo 'tiny' ;endif;?>">
     <div class="swiper-wrapper">
         <?php if($galerie): foreach($galerie as $g):
 
