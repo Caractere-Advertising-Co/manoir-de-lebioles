@@ -31,7 +31,7 @@ $videoScale   = get_sub_field('videoScale');
   </div>
 
   <?php if($videoScale == true):?>
-    <div class="popup-video">
+    <div id="popup-video">
       <span class="hideVideo">x</span>
       <video width="1280" height="720" controls>
         <source src="<?php echo $ctaScale['url'];?>" type="video/mp4" autoplay>
