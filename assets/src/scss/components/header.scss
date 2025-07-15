@@ -61,6 +61,8 @@
               background: none;
               border: none;
               font-size: 0.8rem;
+              display: flex;
+              align-items: center;
 
               &::after {
                 font-size: 0.8rem;
