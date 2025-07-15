@@ -17,7 +17,10 @@ window.addEventListener("load", () => {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
-    autoplay: true,
+    autoplay: {
+      delay: 5000, // 5000 ms = 5 secondes par slide
+      disableOnInteraction: false, // pour que l'autoplay continue après un swipe manuel
+    },
     navigation: {
       nextEl: ".chambre-button-next",
       prevEl: ".chambre-button-prev",
