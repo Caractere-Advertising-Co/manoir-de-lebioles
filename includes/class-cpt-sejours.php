@@ -25,7 +25,7 @@ class CPT_Sejours {
             'has_archive' => true,
             'menu_position' => 4,
             'menu_icon' => 'dashicons-schedule',
-            'supports' => array('title', 'revisions', 'author', 'thumbnail'),
+            'supports' => array('title', 'revisions','excerpt', 'author', 'thumbnail'),
         );
 
         register_post_type('sejours', $args);
