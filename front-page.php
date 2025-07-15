@@ -185,9 +185,7 @@ get_header();?>
           <div class="swiper swiper-img-ardenne">
             <div class="swiper-wrapper">
               <?php foreach($imgArdennes as $img):?>
-                <div class="swiper-slide block-img">
-                  <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>"/>
-                </div>
+                <div class="swiper-slide" style="background:url('<?php echo $img['url'];?>');"></div>
               <?php endforeach;?>
             </div>
           </div>

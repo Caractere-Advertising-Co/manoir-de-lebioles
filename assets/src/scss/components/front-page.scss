@@ -489,10 +489,15 @@
     .cold {
       width: 50%;
 
-      .block-img {
-        height: 100%;
-        //max-width: 500px;
-        width: 100%;
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+        }
       }
     }
   }
