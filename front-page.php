@@ -180,12 +180,12 @@ get_header();?>
           </a>
         <?php endif;?>
       </div>
-      <div class="cold">
+      <div class="cold from-bottom">
         <?php if($imgArdennes):?>
           <div class="swiper swiper-img-ardenne">
             <div class="swiper-wrapper">
               <?php foreach($imgArdennes as $img):?>
-                <div class="swiper-slide block-img from-bottom">
+                <div class="swiper-slide block-img">
                   <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>"/>
                 </div>
               <?php endforeach;?>
