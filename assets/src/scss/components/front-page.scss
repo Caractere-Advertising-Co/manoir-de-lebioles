@@ -86,8 +86,15 @@
   }
 
   &.tiny {
-    height: 50vh;
+    height: 60vh;
     padding-bottom: 5vh;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        height: 60vh;
+        padding-bottom: 5vh;
+      }
+    }
   }
 }
 
