@@ -44,6 +44,17 @@ window.addEventListener("load", () => {
     },
   });
 
+  const swiperArdennes = new Swiper(".swiper-img-ardenne", {
+    modules: [Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 0,
+    crossFade: true,
+    autoplay: {
+      delay: 5000, // 5000 ms = 5 secondes par slide
+      disableOnInteraction: false, // pour que l'autoplay continue après un swipe manuel
+    },
+  });
+
   const swiperHero = new Swiper(".swiper-hero", {
     modules: [Navigation, Pagination, Autoplay],
 

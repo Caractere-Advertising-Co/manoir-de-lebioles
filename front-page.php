@@ -175,18 +175,21 @@ get_header();?>
       <div class="colg">
         <?php if($txtArdennes): echo $txtArdennes; endif;?>
         <?php if($ctaArdennes):?>
-          <a href="<?php echo $ctaArdennes;?>" class="cta from-left">
+          <a href="<?php echo $ctaArdennes['url'];?>" class="cta from-left">
             <?php echo $ctaArdennes['title'];?>
           </a>
         <?php endif;?>
       </div>
       <div class="cold">
         <?php if($imgArdennes):?>
-          <div class="block-img from-bottom">
-            <img src="<?php echo $imgArdennes['url'];?>" alt="<?php echo $imgArdennes['title'];?>"/>
-          </div>
-        <?php endif;?>
-        </div>
+          <div class="swiper swiper-img-ardenne">
+          <?php foreach($imgArdennes as $img):?>
+            <div class="block-img from-bottom">
+              <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>"/>
+            </div>
+          <?php endforeach;
+        endif;?>
+      </div>
     </div>
 </section>
 
