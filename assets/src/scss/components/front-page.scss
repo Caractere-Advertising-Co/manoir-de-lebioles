@@ -664,6 +664,17 @@
       }
     }
 
+    .cold {
+      .cta {
+        &:hover {
+          background-color: $light;
+          color: $dark;
+          filter: invert(0);
+          border: 1px solid $light;
+        }
+      }
+    }
+
     .text {
       opacity: 0;
       transform: translateY(40px);
