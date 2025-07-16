@@ -517,9 +517,9 @@
         .swiper-wrapper {
           .swiper-slide {
             height: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
           }
         }
       }
