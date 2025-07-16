@@ -119,6 +119,10 @@
     .active,
     .accordion:hover {
       background-color: $gold-color;
+
+      h3 {
+        color: $light;
+      }
     }
 
     .accordion:after {
@@ -131,6 +135,7 @@
 
     .active:after {
       content: "\2212";
+      color: $light;
     }
 
     .panel {
