@@ -689,3 +689,15 @@
     }
   }
 }
+
+.scaleVierge {
+  .textScale {
+    height: auto;
+    bottom: 50vh;
+    align-items: center;
+
+    .container {
+      justify-content: center;
+    }
+  }
+}
