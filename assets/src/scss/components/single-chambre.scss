@@ -37,6 +37,10 @@
       em {
         font-style: italic;
       }
+
+      & + p {
+        margin: 0;
+      }
     }
 
     h3 {
@@ -113,7 +117,7 @@
 
     .active,
     .accordion:hover {
-      background-color: $light-gray;
+      background-color: $gold-color;
     }
 
     .accordion:after {
