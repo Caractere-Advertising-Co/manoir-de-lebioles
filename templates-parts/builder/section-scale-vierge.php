@@ -22,7 +22,7 @@ $videoScale   = get_sub_field('videoScale');
       <?php endif;?>
       <div class="cold <?php if($videoScale == true): echo 'video'; endif;?>">
         <?php if($ctaScale):?>
-          <a class="cta -border" <?php echo $videoScale == true ? 'href="#!" data-video="popup-video" class="triggerVideo"' : 'href="'.$ctaScale['url'].'"';?>>
+          <a class="cta -border" <?php echo $videoScale == true ? 'href="#!" data-video="popup-video" id="triggerVideo"' : 'href="'.$ctaScale['url'].'"';?>>
             <?php echo $ctaScale['title'];?>
           </a>
         <?php endif;?>
