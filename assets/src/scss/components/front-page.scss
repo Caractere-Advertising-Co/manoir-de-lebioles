@@ -667,7 +667,7 @@
     .cold {
       .cta {
         &:hover {
-          background-color: $light;
+          background-color: $light !important;
           color: $dark;
           filter: invert(0);
           border: 1px solid $light;
