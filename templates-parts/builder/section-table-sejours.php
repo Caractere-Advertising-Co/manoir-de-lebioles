@@ -29,7 +29,10 @@ $query = new WP_Query($args);
                                     <img src="<?php echo esc_url($bg); ?>" alt="<?php echo esc_attr($bgTitle); ?>"/>
                                 <?php endif; ?>
                             </div>
-                            <h4><?php echo $titre; ?></h4>
+                            <div class="block-txt">
+                                <h4><?php echo $titre; ?></h4>
+                                <p><?php echo get_the_excerpt(  );?></p>
+                            </div>
                             <span class="cta-line">En savoir plus</span>
                         </a>
                     </div>
