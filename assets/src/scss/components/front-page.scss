@@ -280,8 +280,10 @@
           }
 
           .titleRoom {
-            opacity: 1;
-            transform: translateY(0);
+            p {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
         }
       }
