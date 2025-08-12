@@ -25,14 +25,16 @@ get_template_part( 'templates-parts/section-hero');?>
                 $descr   = get_field('description-chambre');
                 $galerie = get_field('galerie-chambre');
                 $thmb    = $galerie[0]['url'];
-                $thmbTitle = $galerie[0]['title'];?>
+                $thmbTitle = $galerie[0]['title'];
+                $number  = get_field('nombre');?>
+
 
                 <div class="card-rooms">
                     <a href="<?php echo get_the_permalink( );?>">
                         <div class="block-img">
                             <img src="<?php if($thmb): echo $thmb; endif?>" alt="<?php if($thmbTitle): echo $thmbTitle; endif?>" />
                         </div>  
-                        <div class="titleRoom"><?php echo get_the_title();?></div>
+                        <div class="titleRoom"><?php echo $number;?></div>
                     </a>
                 </div>
             <?php endif; $i++; endwhile;
@@ -47,14 +49,15 @@ get_template_part( 'templates-parts/section-hero');?>
                     $descr   = get_field('description-chambre');
                     $galerie = get_field('galerie-chambre');
                     $thmb    = $galerie[0]['url'];
-                    $thmbTitle = $galerie[0]['title'];?>
+                    $thmbTitle = $galerie[0]['title'];
+                    $number  = get_field('nombre');?>
 
                     <div class="card-rooms">
                         <a href="<?php echo get_the_permalink( );?>">
                             <div class="block-img">
                                 <img src="<?php if($thmb): echo $thmb; endif?>" alt="<?php if($thmbTitle): echo $thmbTitle; endif?>" />
                             </div>  
-                            <div class="titleRoom"><?php echo get_the_title();?></div>
+                            <div class="titleRoom"><?php echo $number;?></div>
                         </a>
                     </div>
                 <?php endif;
