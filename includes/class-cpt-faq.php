@@ -29,6 +29,23 @@ class CPT_FAQ {
         );
 
         register_post_type('faq', $args);
+
+         // Déclaration de la Taxonomie
+        $labels = array(
+            'name' => 'Catégorie FAQs',
+            'new_item_name' => 'Nom de la nouvelle catégorie',
+            'parent_item' => 'Catégorie parent',
+        );
+
+        $args = array(
+            'labels' => $labels,
+            'public' => true,
+            'show_in_rest' => true,
+            'hierarchical' => true, 
+        );
+
+        register_taxonomy( 'Catégories', 'faq', $args );
+
     }
 }
 
