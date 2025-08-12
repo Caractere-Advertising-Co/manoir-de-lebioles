@@ -21,7 +21,7 @@ foreach( $taxonomies as $taxonomy ) {
 }
 ?>
 
-<section id="section-faq builder">
+<section id="section-faq" class="builder">
     <div class="container content">
         <div class="filter-faqs">
             <div class="filter-item active" data-filter="*">Tous</div>
