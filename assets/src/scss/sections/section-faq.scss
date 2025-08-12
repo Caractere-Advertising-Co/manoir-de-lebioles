@@ -3,6 +3,10 @@
 #section-faq {
   padding: 100px 0 0;
 
+  &.builder {
+    padding: 0;
+  }
+
   .container {
     h2 {
       color: $primary-color;
