@@ -61,9 +61,5 @@ foreach( $taxonomies as $taxonomy ) {
             endif;
             wp_reset_postdata();?>
         </div>
-
-        <?php if($ctaFaq):?>
-            <a href="<?php echo $ctaFaq['url'];?>" class="cta"><?php echo $ctaFaq['title'];?></a>
-        <?php endif;?>
     </div>
 </section>
