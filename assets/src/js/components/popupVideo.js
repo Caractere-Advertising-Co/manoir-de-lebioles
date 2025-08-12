@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const trigger = document.getElementById("triggerVideo");
   const closeVideo = document.getElementById("hideVideo");
 
-  trigger.addEventListener("click", function () {
-    video.classList.add("show");
-    console.warn("video is launch");
-  });
+  if (video) {
+    trigger.addEventListener("click", function () {
+      video.classList.add("show");
+      console.warn("video is launch");
+    });
 
-  closeVideo.addEventListener("click", function () {
-    video.classList.remove("show");
-  });
+    closeVideo.addEventListener("click", function () {
+      video.classList.remove("show");
+    });
+  }
 });

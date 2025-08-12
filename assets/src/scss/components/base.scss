@@ -107,3 +107,32 @@
     }
   }
 }
+
+.filter-faqs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 80px auto;
+}
+
+.filter-item {
+  border-bottom: 1px solid $gold-color;
+  padding: 8px 25px;
+  color: $gold-color;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+}
+
+.filter-item.active {
+  background: $gold-color;
+  color: $light;
+}
+
+.listing-faqs {
+  position: static !important;
+}
+.listing-faqs .faq-item {
+  position: static !important;
+}

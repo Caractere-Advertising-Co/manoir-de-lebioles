@@ -105,6 +105,8 @@
         get_template_part( $builder . 'section-decouvertes');
       elseif( get_row_layout() == "grille-sejour"):
         get_template_part( $builder . 'section-table-sejours');
+      elseif( get_row_layout() == "section-faqs-listing"):
+        get_template_part( $builder . 'section-faq');
       endif;
     endwhile;
   endif;?>

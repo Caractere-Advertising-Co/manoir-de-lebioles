@@ -49,7 +49,8 @@ document.querySelectorAll(".scale-section").forEach((section) => {
 import "./components/animate.js";
 import "./components/swiper.js";
 import "./components/stickyMenu.js";
+import "./components/filter.js";
 import "./components/megamenu.js";
 import "./components/scrollTop.js";
-import "./components/accordeons.js";
+//import "./components/accordeons.js";
 import "./components/popupVideo.js";
