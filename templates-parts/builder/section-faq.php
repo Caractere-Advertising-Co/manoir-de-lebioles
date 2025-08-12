@@ -1,8 +1,5 @@
 <?php
 
-$titreFAQ = get_field('titre-faq','options');
-$ctaFaq = get_field('cta-faq','options');
-
 $args = array(
     'post_type' => 'faq',
     'posts_per_page'=> -1,
@@ -26,8 +23,6 @@ foreach( $taxonomies as $taxonomy ) {
 
 <section id="section-faq">
     <div class="container content">
-        <?php if($titreFAQ): echo $titreFAQ; endif;?>
-
         <div class="filter-faqs">
             <div class="filter-item active" data-filter="*">Tous</div>
 
