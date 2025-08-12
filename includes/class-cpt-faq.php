@@ -30,7 +30,7 @@ class CPT_FAQ {
 
         register_post_type('faq', $args);
 
-         // Déclaration de la Taxonomie
+        // Déclaration de la Taxonomie
         $labels = array(
             'name' => 'Catégorie FAQs',
             'new_item_name' => 'Nom de la nouvelle catégorie',
@@ -44,9 +44,28 @@ class CPT_FAQ {
             'hierarchical' => true, 
         );
 
-        register_taxonomy( 'Catégories', 'faq', $args );
-
+        register_taxonomy( 'faq_category', 'faq', $args ); // ✅ nom technique changé
     }
 }
 
-add_action('init', ['CPT_FAQ', 'register']);?>
+// Ajouter colonne "Catégorie" dans admin
+add_filter('manage_faq_posts_columns', function($columns) {
+    $columns['faq_category'] = __('Catégorie', 'custom_post_type');
+    return $columns;
+});
+
+add_action('manage_faq_posts_custom_column', function($column, $post_id) {
+    if ($column === 'faq_category') {
+        $terms = get_the_terms($post_id, 'faq_category');
+        if (!empty($terms) && !is_wp_error($terms)) {
+            $categories = wp_list_pluck($terms, 'name');
+            echo implode(', ', $categories);
+        } else {
+            echo '<em>Aucune</em>';
+        }
+    }
+}, 10, 2);
+
+add_action('init', ['CPT_FAQ', 'register']);
+
+?>
