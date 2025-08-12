@@ -1,4 +1,5 @@
 <?php 
+/* Template Name: Single Chambre */
 
 $galerie     = get_field('galerie-chambre');
 $title       = get_the_title();

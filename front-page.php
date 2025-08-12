@@ -135,7 +135,7 @@ get_header();?>
                 <a href="<?php echo get_permalink(get_the_ID());?>" class="block-img">
                   <img src="<?= esc_url($thumb); ?>" alt="<?= esc_attr(get_the_title()); ?>">
                 </a>
-                <div class="titleRoom"><?php echo $number . '<br>' . get_the_title();?></div>
+                <div class="titleRoom"><?php echo $number;?></div>
               </div>
               <?php
             endif;
