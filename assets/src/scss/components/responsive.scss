@@ -315,6 +315,13 @@
     }
   }
 
+  #description-chambre,
+  #informations-toggle {
+    .block-cta {
+      gap: 30px;
+    }
+  }
+
   #galerie-builder {
     .container {
       width: 70vw !important;
