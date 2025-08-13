@@ -423,7 +423,7 @@
   #sticky-columns,
   #sticky-columns-right {
     .container {
-      &.sticky {
+      .sticky {
         position: relative;
       }
     }
