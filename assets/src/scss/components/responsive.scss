@@ -460,4 +460,16 @@
       }
     }
   }
+
+  #listing-chambres {
+    .container {
+      &.-col3,
+      &.-col2 {
+        .card-rooms {
+          width: 100%;
+          height: 200px;
+        }
+      }
+    }
+  }
 }
