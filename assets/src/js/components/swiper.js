@@ -98,6 +98,23 @@ window.addEventListener("load", () => {
       nextEl: ".btnNextGalChambre",
       prevEl: ".btnPrevGalChambre",
     },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+    },
   });
 
   const swiperBuilder = new Swiper(".swiper-galerie-builder", {

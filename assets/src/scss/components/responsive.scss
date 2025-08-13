@@ -92,6 +92,7 @@
         .block-img {
           width: 100%;
           height: 370px;
+          max-width: 100%;
         }
 
         p {
@@ -105,7 +106,7 @@
 
       .cold {
         .block-galerie {
-          margin: 0 auto;
+          margin: 0 auto 30px;
         }
       }
     }
@@ -115,6 +116,10 @@
   #fullwidth-banner {
     .cta-line {
       padding: 5px 80px;
+    }
+
+    .parallax-bg {
+      height: 100vh;
     }
   }
 
@@ -157,6 +162,10 @@
 
     &::after {
       top: -5%;
+    }
+
+    .container {
+      gap: 50px;
     }
   }
 
@@ -214,6 +223,7 @@
 
   #evenements {
     height: auto;
+    max-height: max-content;
     padding: 0;
 
     .container.columns {
@@ -246,7 +256,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 120%;
+      height: 100vh;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -318,6 +328,8 @@
   footer {
     .container {
       .footer-middle-top {
+        align-items: center;
+
         .block-right {
           .columns {
             .colg,
