@@ -173,6 +173,14 @@
 
   /* END INTRO */
 
+  #description-chambre,
+  #informations-toggle {
+    .container {
+      width: 80vw !important;
+      margin-left: auto;
+    }
+  }
+
   #citation,
   #fullwidth-banner {
     .cta-line {
@@ -408,6 +416,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+    }
+  }
+
+  .page-template-contact {
+    #hero_container {
+      height: 125vh;
+
+      .columns {
+        .cold {
+          width: 90% !important;
+        }
       }
     }
   }
