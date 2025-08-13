@@ -16,6 +16,17 @@
     }
   }
 
+  .columns {
+    flex-direction: column;
+    gap: 30px;
+
+    .colg,
+    .cold,
+    .col {
+      width: 100% !important;
+    }
+  }
+
   #banner-top {
     display: none;
   }
