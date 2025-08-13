@@ -461,13 +461,31 @@
     }
   }
 
+  .page-template-listing-chambres {
+    #hero-container {
+      height: 50vh;
+      padding-bottom: 10vh;
+    }
+  }
+
   #listing-chambres {
+    padding-bottom: 0;
+
     .container {
       &.-col3,
       &.-col2 {
         .card-rooms {
           width: 100%;
           height: 200px;
+
+          a {
+            .titleRooms {
+              p {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          }
         }
       }
     }
