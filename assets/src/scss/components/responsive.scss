@@ -420,6 +420,21 @@
     }
   }
 
+  #sticky-columns,
+  #sticky-columns-right {
+    .container {
+      &.sticky {
+        position: relative;
+      }
+    }
+  }
+
+  #sticky-columns-right {
+    .container {
+      flex-direction: column-reverse;
+    }
+  }
+
   .page-template-contact {
     #hero_container {
       height: 125vh;
