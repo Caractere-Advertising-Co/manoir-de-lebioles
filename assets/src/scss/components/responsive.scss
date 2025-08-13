@@ -3,15 +3,16 @@
 @media screen and (max-width: 1024px) {
   .container {
     width: 90vw !important;
-  }
-  .columns {
-    flex-direction: column;
-    gap: 30px;
 
-    .colg,
-    .cold,
-    .col {
-      width: 100% !important;
+    &.columns {
+      flex-direction: column;
+      gap: 30px;
+
+      .colg,
+      .cold,
+      .col {
+        width: 100% !important;
+      }
     }
   }
 
@@ -37,8 +38,15 @@
 
       &.megamenu-open {
         background: none;
-        filter: invert(1);
+        filter: invert(0);
         box-shadow: none;
+        z-index: 3;
+      }
+    }
+
+    .content {
+      #btnMegamenu {
+        justify-content: center;
       }
     }
 
@@ -76,6 +84,16 @@
         text-align: center;
       }
     }
+
+    &.swiper-hero {
+      height: 60vh;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          height: 60vh;
+        }
+      }
+    }
   }
 
   #introduction {
@@ -111,6 +129,38 @@
       }
     }
   }
+
+  #intro-about {
+    .container {
+      &.-top,
+      &.-bottom {
+        margin: auto;
+        margin-right: auto;
+        margin-left: auto;
+        gap: 50px;
+      }
+
+      .cold {
+        .block-img {
+          margin-top: 0;
+        }
+      }
+
+      &.-bottom {
+        max-height: 100vh;
+
+        .cold {
+          padding-top: 0;
+
+          .block-img {
+            margin-top: 450px;
+          }
+        }
+      }
+    }
+  }
+
+  /* END INTRO */
 
   #citation,
   #fullwidth-banner {
