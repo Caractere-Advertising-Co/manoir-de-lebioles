@@ -15,7 +15,7 @@ $contact        = get_field('contactFooter','options');
 
 <footer>
     <div class="container">
-        <div class="footer-middle-top">
+        <div class="footer-middle-top columns">
             <div class="block-left">
                 <?php if($logoFooter):?>
                     <div class="block-img">
