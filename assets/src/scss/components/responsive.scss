@@ -314,4 +314,28 @@
       }
     }
   }
+
+  #footer {
+    .container {
+      .footer-middle-top {
+        .block-right {
+          .columns {
+            .colg,
+            .cold {
+              p,
+              li {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
 }
