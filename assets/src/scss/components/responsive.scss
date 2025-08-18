@@ -494,10 +494,12 @@
   }
 
   #section-contact-about {
-    margin: auto;
-
     .columns {
+      margin: auto;
+
       .colg {
+        height: fit-content;
+
         .block-img {
           max-height: 500px;
         }
