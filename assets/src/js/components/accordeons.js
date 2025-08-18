@@ -1,6 +1,3 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
-
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
@@ -10,5 +7,10 @@ for (i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
+
+    // Après l'animation (ou direct si instantané) rafraîchir les triggers
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 300); // petit délai si tu veux laisser la transition CSS/JS s’appliquer
   });
 }
