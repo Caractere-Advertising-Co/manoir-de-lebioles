@@ -3,6 +3,7 @@
 $galerie = get_sub_field('galerie-sticky');
 $title   = get_sub_field('title-sticky');
 $descr   = get_sub_field('texte-sticky');
+$ancre   = get_sub_field('ancre');
 
 ?>
 
@@ -29,7 +30,7 @@ $descr   = get_sub_field('texte-sticky');
             </div>
             <?php endif;?>                    
         </div>
-        <div class="cold">
+        <div class="cold" id="<?php echo $ancre;?>">
             <?php if($descr): echo $descr; endif;?>
         </div>
     </div>

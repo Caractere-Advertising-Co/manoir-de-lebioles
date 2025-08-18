@@ -3,12 +3,14 @@
 $galerie = get_sub_field('galerie-sticky');
 $title   = get_sub_field('title-sticky');
 $descr   = get_sub_field('texte-sticky');
+$ancre   = get_sub_field('ancre');
+
 
 ?>
 
 <section id="sticky-columns-right">
     <div class="container columns">
-        <div class="colg">
+        <div class="colg" id="<?php echo $ancre;?>">
             <?php if($descr): echo $descr; endif;?>
         </div>
         <div class="cold sticky">

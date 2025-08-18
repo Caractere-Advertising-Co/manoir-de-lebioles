@@ -26,6 +26,15 @@
             </div>
           </div>
         </section>
+
+        <?php if(is_page(2587)):?>
+          <div class="filter-faqs">
+              <a class="filter-item" href="#visage">Soins visages</a>
+              <a class="filter-item" href="#corps">Soins du corps</a>
+              <a class="filter-item" href="#rituelBabor">Les rituels Babor</a>
+              <a class="filter-item" href="#ceremonieBabor">Les Cérémonies Babor</a>
+            </div>
+          <?php endif;?>
       <?php elseif( get_row_layout() == "groupe-informations"):?>
         <section id="informations-toggle">
           <div class="container listing-infos">
