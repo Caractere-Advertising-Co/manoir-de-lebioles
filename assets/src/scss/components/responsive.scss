@@ -158,7 +158,7 @@
       }
 
       &.-bottom {
-        max-height: 100vh;
+        max-height: 110vh;
 
         .cold {
           padding-top: 0;
@@ -488,6 +488,24 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  #section-contact-about {
+    margin: auto;
+
+    .columns {
+      .colg {
+        .block-img {
+          max-height: 500px;
+        }
+      }
+
+      .cold {
+        .block-img {
+          display: none;
         }
       }
     }
