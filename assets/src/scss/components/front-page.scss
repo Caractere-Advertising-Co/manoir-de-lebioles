@@ -635,8 +635,9 @@
     margin: auto;
     display: flex;
     align-items: center;
-    position: relative;
-    top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 10vw;
     z-index: 2;
 
     .container {
