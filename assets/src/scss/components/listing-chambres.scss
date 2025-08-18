@@ -73,11 +73,10 @@
           }
         }
 
-        .titleRoom {
-          p {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        .titleRoom,
+        .titleRoom p {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     }
