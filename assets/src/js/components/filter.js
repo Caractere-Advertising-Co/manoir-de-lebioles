@@ -5,14 +5,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Init Isotope en mode vertical
+  // Vérifie si la grille FAQ existe
   var grid = document.querySelector(".listing-faqs");
-  var iso = new Isotope(grid, {
-    itemSelector: ".faq-item",
-    layoutMode: "vertical",
-  });
+  var iso = null;
 
-  // Fonction accordéon
+  if (grid) {
+    iso = new Isotope(grid, {
+      itemSelector: ".faq-item",
+      layoutMode: "vertical",
+    });
+  }
+
+  // Fonction accordéon (commune à tous)
   function initAccordions() {
     var acc = document.getElementsByClassName("accordion");
     for (var i = 0; i < acc.length; i++) {
@@ -46,26 +50,28 @@ document.addEventListener("DOMContentLoaded", function () {
   // Init accordéon au chargement
   initAccordions();
 
-  // Filtres
-  var filters = document.querySelectorAll(".filter-item");
-  filters.forEach(function (filter) {
-    filter.addEventListener("click", function () {
-      var filterValue = this.getAttribute("data-filter");
-      iso.arrange({ filter: filterValue });
+  // Filtres (uniquement si Isotope est présent)
+  if (iso) {
+    var filters = document.querySelectorAll(".filter-item");
+    filters.forEach(function (filter) {
+      filter.addEventListener("click", function () {
+        var filterValue = this.getAttribute("data-filter");
+        iso.arrange({ filter: filterValue });
 
-      filters.forEach((f) => f.classList.remove("active"));
-      this.classList.add("active");
+        filters.forEach((f) => f.classList.remove("active"));
+        this.classList.add("active");
 
-      // Réinitialiser les accordéons (tout fermer au changement de filtre)
-      var panels = document.querySelectorAll(".panel");
-      var accs = document.querySelectorAll(".accordion");
-      panels.forEach((p) => (p.style.maxHeight = null));
-      accs.forEach((a) => a.classList.remove("active"));
+        // Réinitialiser les accordéons (tout fermer au changement de filtre)
+        var panels = document.querySelectorAll(".panel");
+        var accs = document.querySelectorAll(".accordion");
+        panels.forEach((p) => (p.style.maxHeight = null));
+        accs.forEach((a) => a.classList.remove("active"));
 
-      // après réarrangement Isotope, recalcul ScrollTrigger
-      iso.on("arrangeComplete", function () {
-        ScrollTrigger.refresh();
+        // après réarrangement Isotope, recalcul ScrollTrigger
+        iso.on("arrangeComplete", function () {
+          ScrollTrigger.refresh();
+        });
       });
     });
-  });
+  }
 });
