@@ -20,9 +20,9 @@ export function scrollChefZoom(section, img, text) {
     end: "bottom center",
     pin: true,
     animation: tl,
-    //markers: true,
+    markers: true,
     scrub: 0.78,
-    pinSpacing: false,
+    pinSpacing: true,
     onUpdate: (self) => {
       if (self.progress > 0.2) {
         text?.classList.add("show");
