@@ -3,7 +3,7 @@
 $galerie = get_field('galerie-hero');
 
 if (is_singular('chambres')):
-    $galerie = get_field('galerie-chambre');
+    $galerie = get_field('galerie-chambre-hero');
 elseif (is_singular('jobs')):
     $galerie = get_field('galerie-jobs');
 elseif(is_singular( 'sejours' )):
