@@ -36,19 +36,12 @@ if (is_single() || in_array(get_the_ID(), $tiny)) {
             $video          = $g['is_video'];
             $videoUrl       = $g['url_video'];
         endif;?>
-            <div class="swiper-slide" style="background:url('<?php if($heroUrl): echo $heroUrl;endif;?>');background-size:cover;" data-swiper-autoplay="5000">
+            <div class="swiper-slide" style="background:url('<?php if(!empty($heroUrl)): echo $heroUrl;endif;?>');background-size:cover;" data-swiper-autoplay="5000">
                 <div class="container from-left">
                     <?php if (!is_singular('chambres')):
                         if($titreHero): echo $titreHero; endif;
                         if($subTitleHero): echo $subTitleHero; endif;
                     endif;?>
-
-                    <?php if($video):?>
-                        <video width="1920" height="1080" autoplay muted loop>
-                            <source src="<?php echo $videoUrl['url'];?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php endif;?>
                 </div>
             </div>
         <?php endforeach;endif;?>
@@ -66,6 +59,12 @@ if (is_single() || in_array(get_the_ID(), $tiny)) {
             </table>';
         endif;?>
     <div class="swiper-pagination"></div>
+    <?php if($video == true):?>
+        <video width="1920" height="1080" autoplay muted loop>
+            <source src="<?php echo $videoUrl['url'];?>" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <?php endif;?>
 </div>
 
 <?php 
