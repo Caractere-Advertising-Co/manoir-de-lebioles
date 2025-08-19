@@ -30,7 +30,9 @@ if (is_single() || in_array(get_the_ID(), $tiny)) {
             $nbres          = get_field('nbre-personne');
         else : 
             $hero           = $g['hero'];
-            $heroUrl        = $hero['url'];
+            if(isset($hero['url'])):
+                $heroUrl        = $hero['url'];
+            endif;
             $titreHero      = $g['titre_hero'];
             $subTitleHero   = $g['soustitre_hero'];
             $video          = $g['is_video'];
