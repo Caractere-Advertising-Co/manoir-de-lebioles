@@ -34,7 +34,7 @@ if (is_single() || in_array(get_the_ID(), $tiny)) {
             $titreHero      = $g['titre_hero'];
             $subTitleHero   = $g['soustitre_hero'];
             $video          = $g['is_video'];
-            $videoUrl       = $g['url-video'];
+            $videoUrl       = $g['url_video'];
         endif;?>
             <div class="swiper-slide" style="background:url('<?php if($heroUrl): echo $heroUrl;endif;?>');background-size:cover;" data-swiper-autoplay="5000">
                 <div class="container from-left">
