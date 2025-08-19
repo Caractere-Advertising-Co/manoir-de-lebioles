@@ -22,7 +22,7 @@ get_template_part( 'templates-parts/block-builder' );
       <?php if ( ! empty( $prev_post ) ): ?>
         <a href="<?php echo get_permalink( $prev_post->ID ); ?>">
           <div class="block-img">
-            <img src="<?php echo the_post_thumbnail_url(  );?>" alt="<?php echo the_post_thumbnail_caption( );?>" />
+            <img src="<?php echo get_the_post_thumbnail_url( $prev_post->ID );?>" alt="<?php echo get_the_post_thumbnail_caption( $prev_post->ID);?>" />
           </div>
           <h4><?php echo apply_filters( 'the_title', $prev_post->post_title ); ?></h4>
         </a>
@@ -33,7 +33,7 @@ get_template_part( 'templates-parts/block-builder' );
       <?php if ( ! empty( $next_post ) ): ?>
         <a href="<?php echo get_permalink( $next_post->ID ); ?>">
           <div class="block-img">
-             <img src="<?php echo the_post_thumbnail_url(  );?>" alt="<?php echo the_post_thumbnail_caption( );?>" />
+             <img src="<?php echo get_the_post_thumbnail_url( $next_post->ID );?>" alt="<?php echo get_the_post_thumbnail_caption( $next_post->ID);?>" />
           </div>
           <h4><?php echo apply_filters( 'the_title', $next_post->post_title ); ?></h4>
         </a>
