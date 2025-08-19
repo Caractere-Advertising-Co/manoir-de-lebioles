@@ -4,7 +4,7 @@ $txtExpUnique = get_sub_field('titre-exp-unique');
 $galExpUnique = get_sub_field('galerie-exp-unique');
 $ctaExpUnique = get_sub_field('cta-exp-unique');
 $backExpUnique = get_sub_field('background');
-
+$smallImg     = get_sub_field('smallImage-exp');
 ?>
 
 <section id="experience-uniques">
@@ -32,7 +32,11 @@ $backExpUnique = get_sub_field('background');
             </div>
             <div class="swiper-button-prev btnPrevEvents"></div>
             <div class="swiper-button-next btnNextEvents"></div>
-            <div class="blockDark from-bottom"></div>
+            <div class="blockDark block-img from-bottom">
+                <?php if($smallImg):?>
+                    <img src="<?php echo $smallImg['url'];?>" alt="<?php echo $smallImg['title'];?>"/>
+                <?php endif;?>
+            </div>
         </div>
     </div>
 </section>
