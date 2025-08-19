@@ -11,7 +11,7 @@ $videoScale   = get_sub_field('videoScale');
  
 
   <?php if($videoScale == true):?>
-    <video width="1920" height="1080" controls>
+    <video width="1920" height="1080" autoplay muted loop>
       <source src="<?php echo $ctaScale['url'];?>" type="video/mp4">
         Your browser does not support the video tag.
     </video>

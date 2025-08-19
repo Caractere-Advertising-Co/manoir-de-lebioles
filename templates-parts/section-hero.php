@@ -33,6 +33,8 @@ if (is_single() || in_array(get_the_ID(), $tiny)) {
             $heroUrl        = $hero['url'];
             $titreHero      = $g['titre_hero'];
             $subTitleHero   = $g['soustitre_hero'];
+            $video          = $g['is_video'];
+            $videoUrl       = $g['url-video'];
         endif;?>
             <div class="swiper-slide" style="background:url('<?php if($heroUrl): echo $heroUrl;endif;?>');background-size:cover;" data-swiper-autoplay="5000">
                 <div class="container from-left">
@@ -40,6 +42,13 @@ if (is_single() || in_array(get_the_ID(), $tiny)) {
                         if($titreHero): echo $titreHero; endif;
                         if($subTitleHero): echo $subTitleHero; endif;
                     endif;?>
+
+                    <?php if($video):?>
+                        <video width="1920" height="1080" autoplay muted loop>
+                            <source src="<?php echo $videoUrl['url'];?>" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    <?php endif;?>
                 </div>
             </div>
         <?php endforeach;endif;?>
