@@ -1,6 +1,8 @@
 <?php 
 
 $galerie = get_field('galerie-hero');
+$video;
+$videoUrl;
 
 if (is_singular('chambres')):
     $galerie = get_field('galerie-chambre-hero');
@@ -29,6 +31,7 @@ if (is_single() || in_array(get_the_ID(), $tiny)) {
             $super          = get_field('superficie');
             $nbres          = get_field('nbre-personne');
             $videoUrl;
+            $video;
         else : 
             $hero           = $g['hero'];
             if(isset($hero['url'])):
